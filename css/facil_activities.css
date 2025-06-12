@@ -1,0 +1,119 @@
+/* Styles for FÁCEIS.html activities page */
+.activity-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.activity-section h2 {
+    color: var(--highlight-color);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.activity-section p {
+    color: #000000;
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.activity-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    border-left: 5px solid var(--highlight-color);
+}
+.activity-item h3 {
+    color: var(--text-color);
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.activity-item pre {
+    background-color: #000;
+    color: #00FF00; /* Cor de destaque para o código */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Quebra de linha para códigos longos */
+    word-wrap: break-word;
+}
+.activity-item pre code {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.95em;
+}
+.activity-item .solution-header {
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Estilo para o botão de copiar */
+.copy-button {
+    background-color: #333;
+    color: var(--text-color);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #444;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .activity-section {
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .activity-section h2 {
+        font-size: 1.5em;
+    }
+    .activity-section p {
+        font-size: 1em;
+    }
+    .activity-item {
+        padding: 15px;
+    }
+    .activity-item h3 {
+        font-size: 1.2em;
+    }
+    .solution-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.solution-button {
+    background-color: var(--highlight-color);
+    color: #111111;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.solution-button:hover {
+    background-color: #00a3d9;
+    transform: translateY(-2px);
+}
+
+.solution-content {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border-left: 4px solid var(--highlight-color);
+} 

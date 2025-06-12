@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Médios - Lógica de Programação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .exercicios-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .exercicio-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+        .exercicio-card h3 {
+            color: var(--highlight-color);
+            margin-top: 0;
+        }
+        .exercicio-card p {
+            color: #CCC;
+            margin-bottom: 15px;
+        }
+        .exercicio-card pre {
+            background-color: #000;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .exercicio-card code {
+            color: #00FF00;
+            font-family: 'Consolas', monospace;
+        }
+        .solution-button {
+            background-color: var(--highlight-color);
+            color: var(--background-color);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-bottom: 15px;
+        }
+        .solution-button:hover {
+            background-color: #00CC00;
+            transform: translateY(-2px);
+        }
+        .solution-code {
+            display: none;
+            margin-top: 15px;
+        }
+        .solution-code.show {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleSolution(button) {
+            const solutionCode = button.nextElementSibling;
+            solutionCode.classList.toggle('show');
+            button.textContent = solutionCode.classList.contains('show') ? 'Ocultar Solução' : 'Mostrar Solução';
+        }
+    </script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <a href="index.html" class="back-button">← Voltar para Início</a>
+    </header>
+
+    <main>
+        <div class="card-hero">
+            <h1>Exercícios Médios <span class="pin">🔥</span></h1>
+            <p>Ideal para quem já possui certa experiência com o mundo da programação. Fazer estas questões irá te levar ao próximo nível!</p>
+        </div>
+
+        <section class="exercicios-section">
+            <!-- Exercício 1 -->
+            <div class="exercicio-card">
+                <h3>1. Verificar Primo</h3>
+                <p>Crie um programa que verifique se um número é primo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 17
+primo = True
+for i in range(2, numero):
+    if numero % i == 0:
+        primo = False
+        break
+print("É primo" if primo else "Não é primo")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 2 -->
+            <div class="exercicio-card">
+                <h3>2. Contar Vogais</h3>
+                <p>Crie um programa que conte quantas vogais existem em uma palavra.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>palavra = "programacao"
+vogais = sum(1 for letra in palavra if letra in "aeiou")
+print("Número de vogais:", vogais)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 3 -->
+            <div class="exercicio-card">
+                <h3>3. Inverter String</h3>
+                <p>Crie um programa que inverta uma string.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>texto = "python"
+invertido = texto[::-1]
+print("Texto invertido:", invertido)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 4 -->
+            <div class="exercicio-card">
+                <h3>4. Soma dos Pares</h3>
+                <p>Crie um programa que some todos os números pares de 1 a 100.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>soma = sum(i for i in range(1, 101) if i % 2 == 0)
+print("Soma dos pares:", soma)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 5 -->
+            <div class="exercicio-card">
+                <h3>5. Fibonacci até N</h3>
+                <p>Crie um programa que mostre os primeiros N termos da sequência de Fibonacci.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>n = 5
+a, b = 0, 1
+for _ in range(n):
+    print(a)
+    a, b = b, a + b</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 6 -->
+            <div class="exercicio-card">
+                <h3>6. Soma dos Dígitos</h3>
+                <p>Crie um programa que calcule a soma dos dígitos de um número.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>n = 216
+soma = sum(int(d) for d in str(n))
+print("Soma dos dígitos:", soma)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 7 -->
+            <div class="exercicio-card">
+                <h3>7. Múltiplos de 3 e 5</h3>
+                <p>Crie um programa que mostre os múltiplos de 3 ou 5 entre 1 e 50.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>for i in range(1, 51):
+    if i % 3 == 0 or i % 5 == 0:
+        print(i)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 8 -->
+            <div class="exercicio-card">
+                <h3>8. Números Perfeitos</h3>
+                <p>Crie um programa que verifique se um número é perfeito.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>n = 28
+soma = sum(i for i in range(1, n) if n % i == 0)
+print("É perfeito?" if soma == n else "Não é perfeito")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 9 -->
+            <div class="exercicio-card">
+                <h3>9. Contagem Regressiva</h3>
+                <p>Crie um programa que faça uma contagem regressiva de 10 a 1.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>for i in range(10, 0, -1):
+    print(i)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 10 -->
+            <div class="exercicio-card">
+                <h3>10. Palíndromo</h3>
+                <p>Crie um programa que verifique se uma palavra é um palíndromo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>texto = "radar"
+if texto == texto[::-1]:
+    print("É palíndromo")
+else:
+    print("Não é palíndromo")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 11 -->
+            <div class="exercicio-card">
+                <h3>11. Maior e Menor da Lista</h3>
+                <p>Crie um programa que encontre o maior e o menor número em uma lista.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>lista = [38, 32, 14, 30, 8]
+print("Maior:", max(lista))
+print("Menor:", min(lista))</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 12 -->
+            <div class="exercicio-card">
+                <h3>12. Produto de Números</h3>
+                <p>Crie um programa que calcule o produto dos números de 1 a N.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>n = 7
+produto = 1
+for i in range(1, n + 1):
+    produto *= i
+print("Produto:", produto)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 13 -->
+            <div class="exercicio-card">
+                <h3>13. Verificar Substring</h3>
+                <p>Crie um programa que verifique se uma string contém uma substring.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>texto = "programacao"
+substring = "grama"
+if substring in texto:
+    print("Contém a substring")
+else:
+    print("Não contém a substring")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 14 -->
+            <div class="exercicio-card">
+                <h3>14. Remover Duplicatas</h3>
+                <p>Crie um programa que remova elementos duplicados de uma lista.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>lista = [1, 2, 2, 3, 4, 4, 5]
+lista_sem_duplicatas = list(set(lista))
+print("Lista sem duplicatas:", lista_sem_duplicatas)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 15 -->
+            <div class="exercicio-card">
+                <h3>15. Comparar Strings</h3>
+                <p>Crie um programa que compare duas strings ignorando maiúsculas e minúsculas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>str1 = "Python"
+str2 = "python"
+if str1.lower() == str2.lower():
+    print("As strings são iguais")
+else:
+    print("As strings são diferentes")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 16 -->
+            <div class="exercicio-card">
+                <h3>16. Contagem de Letras</h3>
+                <p>Crie um programa que conte quantas vezes uma letra aparece em uma palavra.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>palavra = "desenvolvimento"
+letra = "e"
+contagem = palavra.count(letra)
+print(f"A letra '{letra}' aparece {contagem} vezes")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 17 -->
+            <div class="exercicio-card">
+                <h3>17. Ordenar Lista</h3>
+                <p>Crie um programa que ordene uma lista em ordem crescente.</p>
+                <pre><code>lista = [5, 2, 8, 1, 9]
+lista_ordenada = sorted(lista)
+print("Lista ordenada:", lista_ordenada)</code></pre>
+            </div>
+
+            <!-- Exercício 18 -->
+            <div class="exercicio-card">
+                <h3>18. Quadrado Mágico Simples</h3>
+                <p>Crie um programa que verifique se uma matriz 3x3 é um quadrado mágico.</p>
+                <pre><code>matriz = [
+    [8, 1, 6],
+    [3, 5, 7],
+    [4, 9, 2]
+]
+soma_linha1 = sum(matriz[0])
+soma_linha2 = sum(matriz[1])
+soma_linha3 = sum(matriz[2])
+print("É quadrado mágico?" if soma_linha1 == soma_linha2 == soma_linha3 else "Não é quadrado mágico")</code></pre>
+            </div>
+
+            <!-- Exercício 19 -->
+            <div class="exercicio-card">
+                <h3>19. Agrupar Pares e Ímpares</h3>
+                <p>Crie um programa que separe números pares e ímpares em duas listas.</p>
+                <pre><code>numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+pares = [n for n in numeros if n % 2 == 0]
+impares = [n for n in numeros if n % 2 != 0]
+print("Pares:", pares)
+print("Ímpares:", impares)</code></pre>
+            </div>
+
+            <!-- Exercício 20 -->
+            <div class="exercicio-card">
+                <h3>20. Fatorial de um Número</h3>
+                <p>Crie um programa que calcule o fatorial de um número usando recursão.</p>
+                <pre><code>def fatorial(n):
+    return 1 if n <= 1 else n * fatorial(n-1)
+
+n = 7
+print(f"Fatorial de {n}:", fatorial(n))</code></pre>
+            </div>
+
+            <!-- Exercício 21 -->
+            <div class="exercicio-card">
+                <h3>21. Verificar Primo</h3>
+                <p>Crie um programa que verifique se o número 50 é primo.</p>
+                <pre><code>n = 50
+eh_primo = True
+if n < 2:
+    eh_primo = False
+else:
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            eh_primo = False
+            break
+print("É primo?", eh_primo)</code></pre>
+            </div>
+
+            <!-- Exercício 22 -->
+            <div class="exercicio-card">
+                <h3>22. Contar Vogais</h3>
+                <p>Crie um programa que conte quantas vogais há na palavra 'programador'.</p>
+                <pre><code>texto = "programador"
+vogais = "aeiou"
+contador = sum(1 for letra in texto if letra in vogais)
+print("Quantidade de vogais:", contador)</code></pre>
+            </div>
+
+            <!-- Exercício 23 -->
+            <div class="exercicio-card">
+                <h3>23. Inverter String</h3>
+                <p>Crie um programa que inverta a string 'python'.</p>
+                <pre><code>texto = "python"
+invertido = texto[::-1]
+print("Invertido:", invertido)</code></pre>
+            </div>
+
+            <!-- Exercício 24 -->
+            <div class="exercicio-card">
+                <h3>24. Soma dos Pares</h3>
+                <p>Crie um programa que some todos os números pares de 1 a 100.</p>
+                <pre><code>soma = sum(i for i in range(1, 101) if i % 2 == 0)
+print("Soma dos pares:", soma)</code></pre>
+            </div>
+
+            <!-- Exercício 25 -->
+            <div class="exercicio-card">
+                <h3>25. Fibonacci até N</h3>
+                <p>Crie um programa que imprima os primeiros 9 termos da sequência de Fibonacci.</p>
+                <pre><code>n = 9
+a, b = 0, 1
+for _ in range(n):
+    print(a)
+    a, b = b, a + b</code></pre>
+            </div>
+
+            <!-- Exercício 26 -->
+            <div class="exercicio-card">
+                <h3>26. Soma dos Dígitos</h3>
+                <p>Crie um programa que calcule a soma dos dígitos do número 990.</p>
+                <pre><code>n = 990
+soma = sum(int(d) for d in str(n))
+print("Soma dos dígitos:", soma)</code></pre>
+            </div>
+
+            <!-- Exercício 27 -->
+            <div class="exercicio-card">
+                <h3>27. Múltiplos de 3 e 5</h3>
+                <p>Crie um programa que exiba os múltiplos de 3 ou 5 entre 1 e 50.</p>
+                <pre><code>for i in range(1, 51):
+    if i % 3 == 0 or i % 5 == 0:
+        print(i)</code></pre>
+            </div>
+
+            <!-- Exercício 28 -->
+            <div class="exercicio-card">
+                <h3>28. Números Perfeitos</h3>
+                <p>Crie um programa que verifique se 28 é um número perfeito.</p>
+                <pre><code>n = 28
+soma = sum(i for i in range(1, n) if n % i == 0)
+print("É perfeito?", soma == n)</code></pre>
+            </div>
+
+            <!-- Exercício 29 -->
+            <div class="exercicio-card">
+                <h3>29. Contagem Regressiva</h3>
+                <p>Crie um programa que faça uma contagem regressiva de 10 até 1.</p>
+                <pre><code>for i in range(10, 0, -1):
+    print(i)</code></pre>
+            </div>
+
+            <!-- Exercício 30 -->
+            <div class="exercicio-card">
+                <h3>30. Palíndromo</h3>
+                <p>Crie um programa que verifique se a palavra 'radar' é um palíndromo.</p>
+                <pre><code>texto = "radar"
+if texto == texto[::-1]:
+    print("É palíndromo")
+else:
+    print("Não é palíndromo")</code></pre>
+            </div>
+
+            <!-- Exercício 31 -->
+            <div class="exercicio-card">
+                <h3>31. Maior e Menor da Lista</h3>
+                <p>Crie um programa que encontre o maior e o menor número da lista [22, 50, 1, 4, 23].</p>
+                <pre><code>lista = [22, 50, 1, 4, 23]
+print("Maior:", max(lista))
+print("Menor:", min(lista))</code></pre>
+            </div>
+
+            <!-- Exercício 32 -->
+            <div class="exercicio-card">
+                <h3>32. Produto de Números</h3>
+                <p>Crie um programa que calcule o produto dos números de 1 até 6.</p>
+                <pre><code>n = 6
+produto = 1
+for i in range(1, n + 1):
+    produto *= i
+print("Produto:", produto)</code></pre>
+            </div>
+
+            <!-- Exercício 33 -->
+            <div class="exercicio-card">
+                <h3>33. Verificar Substring</h3>
+                <p>Crie um programa que verifique se a substring 'grama' está presente na string 'programacao'.</p>
+                <pre><code>texto = "programacao"
+sub = "grama"
+print(sub in texto)</code></pre>
+            </div>
+
+            <!-- Exercício 34 -->
+            <div class="exercicio-card">
+                <h3>34. Remover Duplicatas</h3>
+                <p>Crie um programa que remova os valores duplicados da lista [1, 2, 2, 3, 4, 4, 5].</p>
+                <pre><code>lista = [1, 2, 2, 3, 4, 4, 5]
+lista_sem_duplicatas = list(set(lista))
+print(lista_sem_duplicatas)</code></pre>
+            </div>
+
+            <!-- Exercício 35 -->
+            <div class="exercicio-card">
+                <h3>35. Comparar Strings</h3>
+                <p>Crie um programa que compare se as strings 'código' e 'código' são iguais.</p>
+                <pre><code>a = "código"
+b = "código"
+print("São iguais?", a == b)</code></pre>
+            </div>
+
+            <!-- Exercício 36 -->
+            <div class="exercicio-card">
+                <h3>36. Contagem de Letras</h3>
+                <p>Crie um programa que conte quantas vezes a letra 'e' aparece na palavra 'desenvolvimento'.</p>
+                <pre><code>palavra = "desenvolvimento"
+letra = "e"
+print("Quantidade:", palavra.count(letra))</code></pre>
+            </div>
+
+            <!-- Exercício 37 -->
+            <div class="exercicio-card">
+                <h3>37. Ordenar Lista</h3>
+                <p>Crie um programa que ordene a lista [9, 1, 5, 3, 7] em ordem crescente.</p>
+                <pre><code>lista = [9, 1, 5, 3, 7]
+lista.sort()
+print(lista)</code></pre>
+            </div>
+
+            <!-- Exercício 38 -->
+            <div class="exercicio-card">
+                <h3>38. Quadrado Mágico Simples</h3>
+                <p>Crie um programa que verifique se a matriz 3x3 abaixo é um quadrado mágico.</p>
+                <pre><code>matriz = [[8, 1, 6], [3, 5, 7], [4, 9, 2]]
+soma = sum(matriz[0])
+eh_magico = all(sum(linha) == soma for linha in matriz) and all(sum(col) == soma for col in zip(*matriz))
+print("É quadrado mágico?", eh_magico)</code></pre>
+            </div>
+
+            <!-- Exercício 39 -->
+            <div class="exercicio-card">
+                <h3>39. Agrupar Pares e Ímpares</h3>
+                <p>Crie um programa que separe os números pares e ímpares da lista [1, 2, 3, 4, 5, 6, 7].</p>
+                <pre><code>lista = [1, 2, 3, 4, 5, 6, 7]
+pares = [n for n in lista if n % 2 == 0]
+impares = [n for n in lista if n % 2 != 0]
+print("Pares:", pares)
+print("Ímpares:", impares)</code></pre>
+            </div>
+
+            <!-- Exercício 40 -->
+            <div class="exercicio-card">
+                <h3>40. Fatorial de um Número</h3>
+                <p>Crie um programa que calcule o fatorial do número 4.</p>
+                <pre><code>n = 4
+fatorial = 1
+for i in range(1, n + 1):
+    fatorial *= i
+print("Fatorial:", fatorial)</code></pre>
+            </div>
+
+            <!-- Exercício 41 -->
+            <div class="exercicio-card">
+                <h3>41. Matriz Transposta</h3>
+                <p>Crie um programa que calcule a matriz transposta de uma matriz 3x3.</p>
+                <pre><code># Criando uma matriz 3x3
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Calculando a matriz transposta
+transposta = [[matriz[j][i] for j in range(len(matriz))] for i in range(len(matriz[0]))]
+
+# Exibindo o resultado
+print("Matriz transposta:", transposta)</code></pre>
+            </div>
+
+            <!-- Exercício 42 -->
+            <div class="exercicio-card">
+                <h3>42. Verificar Anagrama</h3>
+                <p>Crie um programa que verifique se duas palavras são anagramas (contêm as mesmas letras em ordem diferente).</p>
+                <pre><code>def sao_anagramas(palavra1, palavra2):
+    # Converte as palavras para minúsculas e ordena as letras
+    return sorted(palavra1.lower()) == sorted(palavra2.lower())
+
+# Testando com exemplos
+print(sao_anagramas("amor", "roma"))  # Deve retornar True
+print(sao_anagramas("python", "java"))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 43 -->
+            <div class="exercicio-card">
+                <h3>43. Soma de Matrizes</h3>
+                <p>Crie um programa que some duas matrizes 2x2.</p>
+                <pre><code># Definindo as matrizes
+matriz1 = [[1, 2], [3, 4]]
+matriz2 = [[5, 6], [7, 8]]
+
+# Somando as matrizes
+soma = [[matriz1[i][j] + matriz2[i][j] for j in range(len(matriz1[0]))] for i in range(len(matriz1))]
+
+# Exibindo o resultado
+print("Soma das matrizes:", soma)</code></pre>
+            </div>
+
+            <!-- Exercício 44 -->
+            <div class="exercicio-card">
+                <h3>44. Verificar Número Armstrong</h3>
+                <p>Crie um programa que verifique se um número é um número de Armstrong (a soma dos dígitos elevados ao número de dígitos é igual ao próprio número).</p>
+                <pre><code>def eh_armstrong(n):
+    # Obtém os dígitos do número
+    digitos = [int(d) for d in str(n)]
+    # Verifica se é um número de Armstrong
+    return sum(d ** len(digitos) for d in digitos) == n
+
+# Testando com exemplos
+print(eh_armstrong(153))  # Deve retornar True (1³ + 5³ + 3³ = 153)
+print(eh_armstrong(123))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 45 -->
+            <div class="exercicio-card">
+                <h3>45. Inverter Palavras</h3>
+                <p>Crie um programa que inverta a ordem das palavras em uma frase.</p>
+                <pre><code># Frase de exemplo
+frase = "Python é uma linguagem de programação"
+
+# Dividindo a frase em palavras e invertendo
+palavras = frase.split()
+frase_invertida = " ".join(palavras[::-1])
+
+# Exibindo o resultado
+print("Frase original:", frase)
+print("Frase invertida:", frase_invertida)</code></pre>
+            </div>
+
+            <!-- Exercício 46 -->
+            <div class="exercicio-card">
+                <h3>46. Verificar Número Feliz</h3>
+                <p>Crie um programa que verifique se um número é um número feliz (a soma dos quadrados dos dígitos eventualmente chega a 1).</p>
+                <pre><code>def eh_feliz(n):
+    # Conjunto para armazenar números já visitados
+    visitados = set()
+    
+    # Loop até encontrar 1 ou um número já visitado
+    while n != 1 and n not in visitados:
+        visitados.add(n)
+        n = sum(int(d) ** 2 for d in str(n))
+    
+    return n == 1
+
+# Testando com exemplos
+print(eh_feliz(7))  # Deve retornar True
+print(eh_feliz(4))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 47 -->
+            <div class="exercicio-card">
+                <h3>47. Multiplicação de Matrizes</h3>
+                <p>Crie um programa que multiplique duas matrizes 2x2.</p>
+                <pre><code>def multiplicar_matrizes(a, b):
+    # Função para multiplicar duas matrizes
+    return [[sum(a[i][k] * b[k][j] for k in range(len(b))) 
+             for j in range(len(b[0]))] 
+            for i in range(len(a))]
+
+# Matrizes de exemplo
+matriz1 = [[1, 2], [3, 4]]
+matriz2 = [[5, 6], [7, 8]]
+
+# Realizando a multiplicação
+resultado = multiplicar_matrizes(matriz1, matriz2)
+
+# Exibindo o resultado
+print("Resultado da multiplicação:", resultado)</code></pre>
+            </div>
+
+            <!-- Exercício 48 -->
+            <div class="exercicio-card">
+                <h3>48. Verificar Número Kaprekar</h3>
+                <p>Crie um programa que verifique se um número é um número de Kaprekar (quando o quadrado do número pode ser dividido em duas partes que somadas resultam no número original).</p>
+                <pre><code>def eh_kaprekar(n):
+    # Calcula o quadrado do número
+    quadrado = str(n ** 2)
+    
+    # Verifica todas as possíveis divisões
+    for i in range(1, len(quadrado)):
+        parte1 = int(quadrado[:i])
+        parte2 = int(quadrado[i:])
+        if parte1 + parte2 == n:
+            return True
+    return False
+
+# Testando com exemplos
+print(eh_kaprekar(45))  # Deve retornar True (45² = 2025, 20 + 25 = 45)
+print(eh_kaprekar(10))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 49 -->
+            <div class="exercicio-card">
+                <h3>49. Verificar Número Narcisista</h3>
+                <p>Crie um programa que verifique se um número é um número narcisista (a soma dos dígitos elevados ao número de dígitos é igual ao próprio número).</p>
+                <pre><code>def eh_narcisista(n):
+    # Obtém os dígitos do número
+    digitos = [int(d) for d in str(n)]
+    # Verifica se é narcisista
+    return sum(d ** len(digitos) for d in digitos) == n
+
+# Testando com exemplos
+print(eh_narcisista(153))  # Deve retornar True (1³ + 5³ + 3³ = 153)
+print(eh_narcisista(123))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 50 -->
+            <div class="exercicio-card">
+                <h3>50. Verificar Número Automórfico</h3>
+                <p>Crie um programa que verifique se um número é um número automórfico (o quadrado do número termina com o próprio número).</p>
+                <pre><code>def eh_automorfico(n):
+    # Calcula o quadrado do número
+    quadrado = str(n ** 2)
+    # Verifica se o quadrado termina com o número original
+    return quadrado.endswith(str(n))
+
+# Testando com exemplos
+print(eh_automorfico(25))  # Deve retornar True (25² = 625)
+print(eh_automorfico(10))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 51 -->
+            <div class="exercicio-card">
+                <h3>51. Verificar Número Perfeito</h3>
+                <p>Crie um programa que verifique se um número é um número perfeito (a soma dos seus divisores próprios é igual ao próprio número).</p>
+                <pre><code>def eh_perfeito(n):
+    # Encontra os divisores próprios
+    divisores = [i for i in range(1, n) if n % i == 0]
+    # Verifica se a soma dos divisores é igual ao número
+    return sum(divisores) == n
+
+# Testando com exemplos
+print(eh_perfeito(28))  # Deve retornar True (1 + 2 + 4 + 7 + 14 = 28)
+print(eh_perfeito(12))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 52 -->
+            <div class="exercicio-card">
+                <h3>52. Verificar Número Abundante</h3>
+                <p>Crie um programa que verifique se um número é um número abundante (a soma dos seus divisores próprios é maior que o próprio número).</p>
+                <pre><code>def eh_abundante(n):
+    # Encontra os divisores próprios
+    divisores = [i for i in range(1, n) if n % i == 0]
+    # Verifica se a soma dos divisores é maior que o número
+    return sum(divisores) > n
+
+# Testando com exemplos
+print(eh_abundante(12))  # Deve retornar True (1 + 2 + 3 + 4 + 6 = 16 > 12)
+print(eh_abundante(10))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 53 -->
+            <div class="exercicio-card">
+                <h3>53. Verificar Número Deficiente</h3>
+                <p>Crie um programa que verifique se um número é um número deficiente (a soma dos seus divisores próprios é menor que o próprio número).</p>
+                <pre><code>def eh_deficiente(n):
+    # Encontra os divisores próprios
+    divisores = [i for i in range(1, n) if n % i == 0]
+    # Verifica se a soma dos divisores é menor que o número
+    return sum(divisores) < n
+
+# Testando com exemplos
+print(eh_deficiente(10))  # Deve retornar True (1 + 2 + 5 = 8 < 10)
+print(eh_deficiente(12))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 54 -->
+            <div class="exercicio-card">
+                <h3>54. Verificar Número Amigável</h3>
+                <p>Crie um programa que verifique se dois números são números amigáveis (a soma dos divisores próprios de um é igual ao outro e vice-versa).</p>
+                <pre><code>def soma_divisores(n):
+    return sum(i for i in range(1, n) if n % i == 0)
+
+def sao_amigaveis(a, b):
+    return soma_divisores(a) == b and soma_divisores(b) == a
+
+# Testando com exemplos
+print(sao_amigaveis(220, 284))  # Deve retornar True
+print(sao_amigaveis(10, 20))    # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 55 -->
+            <div class="exercicio-card">
+                <h3>55. Verificar Número Triangular</h3>
+                <p>Crie um programa que verifique se um número é um número triangular (pode ser representado como a soma de números naturais consecutivos).</p>
+                <pre><code>def eh_triangular(n):
+    # Verifica se n é um número triangular
+    i = 1
+    soma = 0
+    while soma < n:
+        soma += i
+        i += 1
+    return soma == n
+
+# Testando com exemplos
+print(eh_triangular(10))  # Deve retornar True (1 + 2 + 3 + 4 = 10)
+print(eh_triangular(11))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 56 -->
+            <div class="exercicio-card">
+                <h3>56. Verificar Número Pentagonal</h3>
+                <p>Crie um programa que verifique se um número é um número pentagonal (pode ser representado como n(3n-1)/2).</p>
+                <pre><code>def eh_pentagonal(n):
+    # Verifica se n é um número pentagonal
+    i = 1
+    while True:
+        pentagonal = i * (3 * i - 1) // 2
+        if pentagonal == n:
+            return True
+        if pentagonal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_pentagonal(12))  # Deve retornar True
+print(eh_pentagonal(13))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 57 -->
+            <div class="exercicio-card">
+                <h3>57. Verificar Número Hexagonal</h3>
+                <p>Crie um programa que verifique se um número é um número hexagonal (pode ser representado como n(2n-1)).</p>
+                <pre><code>def eh_hexagonal(n):
+    # Verifica se n é um número hexagonal
+    i = 1
+    while True:
+        hexagonal = i * (2 * i - 1)
+        if hexagonal == n:
+            return True
+        if hexagonal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_hexagonal(15))  # Deve retornar True
+print(eh_hexagonal(16))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 58 -->
+            <div class="exercicio-card">
+                <h3>58. Verificar Número Heptagonal</h3>
+                <p>Crie um programa que verifique se um número é um número heptagonal (pode ser representado como n(5n-3)/2).</p>
+                <pre><code>def eh_heptagonal(n):
+    # Verifica se n é um número heptagonal
+    i = 1
+    while True:
+        heptagonal = i * (5 * i - 3) // 2
+        if heptagonal == n:
+            return True
+        if heptagonal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_heptagonal(18))  # Deve retornar True
+print(eh_heptagonal(19))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 59 -->
+            <div class="exercicio-card">
+                <h3>59. Verificar Número Octagonal</h3>
+                <p>Crie um programa que verifique se um número é um número octagonal (pode ser representado como n(3n-2)).</p>
+                <pre><code>def eh_octagonal(n):
+    # Verifica se n é um número octagonal
+    i = 1
+    while True:
+        octagonal = i * (3 * i - 2)
+        if octagonal == n:
+            return True
+        if octagonal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_octagonal(21))  # Deve retornar True
+print(eh_octagonal(22))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 60 -->
+            <div class="exercicio-card">
+                <h3>60. Verificar Número Nonagonal</h3>
+                <p>Crie um programa que verifique se um número é um número nonagonal (pode ser representado como n(7n-5)/2).</p>
+                <pre><code>def eh_nonagonal(n):
+    # Verifica se n é um número nonagonal
+    i = 1
+    while True:
+        nonagonal = i * (7 * i - 5) // 2
+        if nonagonal == n:
+            return True
+        if nonagonal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_nonagonal(24))  # Deve retornar True
+print(eh_nonagonal(25))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 61 -->
+            <div class="exercicio-card">
+                <h3>61. Verificar Número Decagonal</h3>
+                <p>Crie um programa que verifique se um número é um número decagonal (pode ser representado como n(4n-3)).</p>
+                <pre><code>def eh_decagonal(n):
+    # Verifica se n é um número decagonal
+    i = 1
+    while True:
+        decagonal = i * (4 * i - 3)
+        if decagonal == n:
+            return True
+        if decagonal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_decagonal(27))  # Deve retornar True
+print(eh_decagonal(28))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 62 -->
+            <div class="exercicio-card">
+                <h3>62. Verificar Número Estrelado</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado (pode ser representado como 6n(n-1) + 1).</p>
+                <pre><code>def eh_estrelado(n):
+    # Verifica se n é um número estrelado
+    i = 1
+    while True:
+        estrelado = 6 * i * (i - 1) + 1
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado(13))  # Deve retornar True
+print(eh_estrelado(14))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 63 -->
+            <div class="exercicio-card">
+                <h3>63. Verificar Número Centrado Triangular</h3>
+                <p>Crie um programa que verifique se um número é um número centrado triangular (pode ser representado como (3n² - 3n + 2)/2).</p>
+                <pre><code>def eh_centrado_triangular(n):
+    # Verifica se n é um número centrado triangular
+    i = 1
+    while True:
+        centrado = (3 * i * i - 3 * i + 2) // 2
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_triangular(10))  # Deve retornar True
+print(eh_centrado_triangular(11))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 64 -->
+            <div class="exercicio-card">
+                <h3>64. Verificar Número Centrado Quadrado</h3>
+                <p>Crie um programa que verifique se um número é um número centrado quadrado (pode ser representado como n² + (n-1)²).</p>
+                <pre><code>def eh_centrado_quadrado(n):
+    # Verifica se n é um número centrado quadrado
+    i = 1
+    while True:
+        centrado = i * i + (i - 1) * (i - 1)
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_quadrado(13))  # Deve retornar True
+print(eh_centrado_quadrado(14))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 65 -->
+            <div class="exercicio-card">
+                <h3>65. Verificar Número Centrado Pentagonal</h3>
+                <p>Crie um programa que verifique se um número é um número centrado pentagonal (pode ser representado como (5n² - 5n + 2)/2).</p>
+                <pre><code>def eh_centrado_pentagonal(n):
+    # Verifica se n é um número centrado pentagonal
+    i = 1
+    while True:
+        centrado = (5 * i * i - 5 * i + 2) // 2
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_pentagonal(16))  # Deve retornar True
+print(eh_centrado_pentagonal(17))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 66 -->
+            <div class="exercicio-card">
+                <h3>66. Verificar Número Centrado Hexagonal</h3>
+                <p>Crie um programa que verifique se um número é um número centrado hexagonal (pode ser representado como 3n² - 3n + 1).</p>
+                <pre><code>def eh_centrado_hexagonal(n):
+    # Verifica se n é um número centrado hexagonal
+    i = 1
+    while True:
+        centrado = 3 * i * i - 3 * i + 1
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_hexagonal(19))  # Deve retornar True
+print(eh_centrado_hexagonal(20))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 67 -->
+            <div class="exercicio-card">
+                <h3>67. Verificar Número Centrado Heptagonal</h3>
+                <p>Crie um programa que verifique se um número é um número centrado heptagonal (pode ser representado como (7n² - 7n + 2)/2).</p>
+                <pre><code>def eh_centrado_heptagonal(n):
+    # Verifica se n é um número centrado heptagonal
+    i = 1
+    while True:
+        centrado = (7 * i * i - 7 * i + 2) // 2
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_heptagonal(22))  # Deve retornar True
+print(eh_centrado_heptagonal(23))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 68 -->
+            <div class="exercicio-card">
+                <h3>68. Verificar Número Centrado Octagonal</h3>
+                <p>Crie um programa que verifique se um número é um número centrado octagonal (pode ser representado como 4n² - 4n + 1).</p>
+                <pre><code>def eh_centrado_octagonal(n):
+    # Verifica se n é um número centrado octagonal
+    i = 1
+    while True:
+        centrado = 4 * i * i - 4 * i + 1
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_octagonal(25))  # Deve retornar True
+print(eh_centrado_octagonal(26))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 69 -->
+            <div class="exercicio-card">
+                <h3>69. Verificar Número Centrado Nonagonal</h3>
+                <p>Crie um programa que verifique se um número é um número centrado nonagonal (pode ser representado como (9n² - 9n + 2)/2).</p>
+                <pre><code>def eh_centrado_nonagonal(n):
+    # Verifica se n é um número centrado nonagonal
+    i = 1
+    while True:
+        centrado = (9 * i * i - 9 * i + 2) // 2
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_nonagonal(28))  # Deve retornar True
+print(eh_centrado_nonagonal(29))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 70 -->
+            <div class="exercicio-card">
+                <h3>70. Verificar Número Centrado Decagonal</h3>
+                <p>Crie um programa que verifique se um número é um número centrado decagonal (pode ser representado como 5n² - 5n + 1).</p>
+                <pre><code>def eh_centrado_decagonal(n):
+    # Verifica se n é um número centrado decagonal
+    i = 1
+    while True:
+        centrado = 5 * i * i - 5 * i + 1
+        if centrado == n:
+            return True
+        if centrado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_centrado_decagonal(31))  # Deve retornar True
+print(eh_centrado_decagonal(32))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 71 -->
+            <div class="exercicio-card">
+                <h3>71. Verificar Número Prônico</h3>
+                <p>Crie um programa que verifique se um número é um número prônico (pode ser representado como n(n+1)).</p>
+                <pre><code>def eh_pronico(n):
+    # Verifica se n é um número prônico
+    i = 1
+    while True:
+        pronico = i * (i + 1)
+        if pronico == n:
+            return True
+        if pronico > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_pronico(6))   # Deve retornar True (2 * 3 = 6)
+print(eh_pronico(7))   # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 72 -->
+            <div class="exercicio-card">
+                <h3>72. Verificar Número Oblongo</h3>
+                <p>Crie um programa que verifique se um número é um número oblongo (pode ser representado como n(n+1)).</p>
+                <pre><code>def eh_oblongo(n):
+    # Verifica se n é um número oblongo
+    i = 1
+    while True:
+        oblongo = i * (i + 1)
+        if oblongo == n:
+            return True
+        if oblongo > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_oblongo(6))   # Deve retornar True (2 * 3 = 6)
+print(eh_oblongo(7))   # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 73 -->
+            <div class="exercicio-card">
+                <h3>73. Verificar Número Tetraédrico</h3>
+                <p>Crie um programa que verifique se um número é um número tetraédrico (pode ser representado como n(n+1)(n+2)/6).</p>
+                <pre><code>def eh_tetraedrico(n):
+    # Verifica se n é um número tetraédrico
+    i = 1
+    while True:
+        tetraedrico = i * (i + 1) * (i + 2) // 6
+        if tetraedrico == n:
+            return True
+        if tetraedrico > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_tetraedrico(20))  # Deve retornar True
+print(eh_tetraedrico(21))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 74 -->
+            <div class="exercicio-card">
+                <h3>74. Verificar Número Piramidal Quadrado</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal quadrado (pode ser representado como n(n+1)(2n+1)/6).</p>
+                <pre><code>def eh_piramidal_quadrado(n):
+    # Verifica se n é um número piramidal quadrado
+    i = 1
+    while True:
+        piramidal = i * (i + 1) * (2 * i + 1) // 6
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_quadrado(14))  # Deve retornar True
+print(eh_piramidal_quadrado(15))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 75 -->
+            <div class="exercicio-card">
+                <h3>75. Verificar Número Piramidal Pentagonal</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal pentagonal (pode ser representado como n²(n+1)/2).</p>
+                <pre><code>def eh_piramidal_pentagonal(n):
+    # Verifica se n é um número piramidal pentagonal
+    i = 1
+    while True:
+        piramidal = i * i * (i + 1) // 2
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_pentagonal(20))  # Deve retornar True
+print(eh_piramidal_pentagonal(21))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 76 -->
+            <div class="exercicio-card">
+                <h3>76. Verificar Número Piramidal Hexagonal</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal hexagonal (pode ser representado como n(n+1)(4n-1)/6).</p>
+                <pre><code>def eh_piramidal_hexagonal(n):
+    # Verifica se n é um número piramidal hexagonal
+    i = 1
+    while True:
+        piramidal = i * (i + 1) * (4 * i - 1) // 6
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_hexagonal(22))  # Deve retornar True
+print(eh_piramidal_hexagonal(23))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 77 -->
+            <div class="exercicio-card">
+                <h3>77. Verificar Número Piramidal Heptagonal</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal heptagonal (pode ser representado como n(n+1)(5n-2)/6).</p>
+                <pre><code>def eh_piramidal_heptagonal(n):
+    # Verifica se n é um número piramidal heptagonal
+    i = 1
+    while True:
+        piramidal = i * (i + 1) * (5 * i - 2) // 6
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_heptagonal(24))  # Deve retornar True
+print(eh_piramidal_heptagonal(25))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 78 -->
+            <div class="exercicio-card">
+                <h3>78. Verificar Número Piramidal Octagonal</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal octagonal (pode ser representado como n(n+1)(6n-3)/6).</p>
+                <pre><code>def eh_piramidal_octagonal(n):
+    # Verifica se n é um número piramidal octagonal
+    i = 1
+    while True:
+        piramidal = i * (i + 1) * (6 * i - 3) // 6
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_octagonal(26))  # Deve retornar True
+print(eh_piramidal_octagonal(27))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 79 -->
+            <div class="exercicio-card">
+                <h3>79. Verificar Número Piramidal Nonagonal</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal nonagonal (pode ser representado como n(n+1)(7n-4)/6).</p>
+                <pre><code>def eh_piramidal_nonagonal(n):
+    # Verifica se n é um número piramidal nonagonal
+    i = 1
+    while True:
+        piramidal = i * (i + 1) * (7 * i - 4) // 6
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_nonagonal(28))  # Deve retornar True
+print(eh_piramidal_nonagonal(29))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 80 -->
+            <div class="exercicio-card">
+                <h3>80. Verificar Número Piramidal Decagonal</h3>
+                <p>Crie um programa que verifique se um número é um número piramidal decagonal (pode ser representado como n(n+1)(8n-5)/6).</p>
+                <pre><code>def eh_piramidal_decagonal(n):
+    # Verifica se n é um número piramidal decagonal
+    i = 1
+    while True:
+        piramidal = i * (i + 1) * (8 * i - 5) // 6
+        if piramidal == n:
+            return True
+        if piramidal > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_piramidal_decagonal(30))  # Deve retornar True
+print(eh_piramidal_decagonal(31))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 81 -->
+            <div class="exercicio-card">
+                <h3>81. Verificar Número Estrelado Centrado</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado centrado (pode ser representado como 6n² - 6n + 1).</p>
+                <pre><code>def eh_estrelado_centrado(n):
+    # Verifica se n é um número estrelado centrado
+    i = 1
+    while True:
+        estrelado = 6 * i * i - 6 * i + 1
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_centrado(13))  # Deve retornar True
+print(eh_estrelado_centrado(14))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 82 -->
+            <div class="exercicio-card">
+                <h3>82. Verificar Número Estrelado Hexagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado hexagonal (pode ser representado como 6n² - 5n).</p>
+                <pre><code>def eh_estrelado_hexagonal(n):
+    # Verifica se n é um número estrelado hexagonal
+    i = 1
+    while True:
+        estrelado = 6 * i * i - 5 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_hexagonal(16))  # Deve retornar True
+print(eh_estrelado_hexagonal(17))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 83 -->
+            <div class="exercicio-card">
+                <h3>83. Verificar Número Estrelado Heptagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado heptagonal (pode ser representado como 7n² - 6n).</p>
+                <pre><code>def eh_estrelado_heptagonal(n):
+    # Verifica se n é um número estrelado heptagonal
+    i = 1
+    while True:
+        estrelado = 7 * i * i - 6 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_heptagonal(19))  # Deve retornar True
+print(eh_estrelado_heptagonal(20))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 84 -->
+            <div class="exercicio-card">
+                <h3>84. Verificar Número Estrelado Octagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado octagonal (pode ser representado como 8n² - 7n).</p>
+                <pre><code>def eh_estrelado_octagonal(n):
+    # Verifica se n é um número estrelado octagonal
+    i = 1
+    while True:
+        estrelado = 8 * i * i - 7 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_octagonal(22))  # Deve retornar True
+print(eh_estrelado_octagonal(23))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 85 -->
+            <div class="exercicio-card">
+                <h3>85. Verificar Número Estrelado Nonagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado nonagonal (pode ser representado como 9n² - 8n).</p>
+                <pre><code>def eh_estrelado_nonagonal(n):
+    # Verifica se n é um número estrelado nonagonal
+    i = 1
+    while True:
+        estrelado = 9 * i * i - 8 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_nonagonal(25))  # Deve retornar True
+print(eh_estrelado_nonagonal(26))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 86 -->
+            <div class="exercicio-card">
+                <h3>86. Verificar Número Estrelado Decagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado decagonal (pode ser representado como 10n² - 9n).</p>
+                <pre><code>def eh_estrelado_decagonal(n):
+    # Verifica se n é um número estrelado decagonal
+    i = 1
+    while True:
+        estrelado = 10 * i * i - 9 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_decagonal(28))  # Deve retornar True
+print(eh_estrelado_decagonal(29))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 87 -->
+            <div class="exercicio-card">
+                <h3>87. Verificar Número Estrelado Dodecagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado dodecagonal (pode ser representado como 12n² - 11n).</p>
+                <pre><code>def eh_estrelado_dodecagonal(n):
+    # Verifica se n é um número estrelado dodecagonal
+    i = 1
+    while True:
+        estrelado = 12 * i * i - 11 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_dodecagonal(31))  # Deve retornar True
+print(eh_estrelado_dodecagonal(32))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 88 -->
+            <div class="exercicio-card">
+                <h3>88. Verificar Número Estrelado Tetradecagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado tetradecagonal (pode ser representado como 14n² - 13n).</p>
+                <pre><code>def eh_estrelado_tetradecagonal(n):
+    # Verifica se n é um número estrelado tetradecagonal
+    i = 1
+    while True:
+        estrelado = 14 * i * i - 13 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_tetradecagonal(34))  # Deve retornar True
+print(eh_estrelado_tetradecagonal(35))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 89 -->
+            <div class="exercicio-card">
+                <h3>89. Verificar Número Estrelado Hexadecagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado hexadecagonal (pode ser representado como 16n² - 15n).</p>
+                <pre><code>def eh_estrelado_hexadecagonal(n):
+    # Verifica se n é um número estrelado hexadecagonal
+    i = 1
+    while True:
+        estrelado = 16 * i * i - 15 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_hexadecagonal(37))  # Deve retornar True
+print(eh_estrelado_hexadecagonal(38))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 90 -->
+            <div class="exercicio-card">
+                <h3>90. Verificar Número Estrelado Octadecagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado octadecagonal (pode ser representado como 18n² - 17n).</p>
+                <pre><code>def eh_estrelado_octadecagonal(n):
+    # Verifica se n é um número estrelado octadecagonal
+    i = 1
+    while True:
+        estrelado = 18 * i * i - 17 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_octadecagonal(40))  # Deve retornar True
+print(eh_estrelado_octadecagonal(41))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 91 -->
+            <div class="exercicio-card">
+                <h3>91. Verificar Número Estrelado Icosagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado icosagonal (pode ser representado como 20n² - 19n).</p>
+                <pre><code>def eh_estrelado_icosagonal(n):
+    # Verifica se n é um número estrelado icosagonal
+    i = 1
+    while True:
+        estrelado = 20 * i * i - 19 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_icosagonal(43))  # Deve retornar True
+print(eh_estrelado_icosagonal(44))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 92 -->
+            <div class="exercicio-card">
+                <h3>92. Verificar Número Estrelado Triacontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado triacontagonal (pode ser representado como 30n² - 29n).</p>
+                <pre><code>def eh_estrelado_triacontagonal(n):
+    # Verifica se n é um número estrelado triacontagonal
+    i = 1
+    while True:
+        estrelado = 30 * i * i - 29 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_triacontagonal(46))  # Deve retornar True
+print(eh_estrelado_triacontagonal(47))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 93 -->
+            <div class="exercicio-card">
+                <h3>93. Verificar Número Estrelado Tetracontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado tetracontagonal (pode ser representado como 40n² - 39n).</p>
+                <pre><code>def eh_estrelado_tetracontagonal(n):
+    # Verifica se n é um número estrelado tetracontagonal
+    i = 1
+    while True:
+        estrelado = 40 * i * i - 39 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_tetracontagonal(49))  # Deve retornar True
+print(eh_estrelado_tetracontagonal(50))  # Deve retornar False</code></pre>
+            </div>
+
+            <!-- Exercício 94 -->
+            <div class="exercicio-card">
+                <h3>94. Verificar Número Estrelado Pentacontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado pentacontagonal (pode ser representado como 50n² - 49n).</p>
+                <pre><code>def eh_estrelado_pentacontagonal(n):
+    # Verifica se n é um número estrelado pentacontagonal
+    i = 1
+    while True:
+        estrelado = 50 * i * i - 49 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_pentacontagonal(52))  # Deve retornar True
+print(eh_estrelado_pentacontagonal(53))  # Deve retornar False</code></pre>
+                    </div>
+
+            <!-- Exercício 95 -->
+            <div class="exercicio-card">
+                <h3>95. Verificar Número Estrelado Hexacontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado hexacontagonal (pode ser representado como 60n² - 59n).</p>
+                <pre><code>def eh_estrelado_hexacontagonal(n):
+    # Verifica se n é um número estrelado hexacontagonal
+    i = 1
+    while True:
+        estrelado = 60 * i * i - 59 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_hexacontagonal(55))  # Deve retornar True
+print(eh_estrelado_hexacontagonal(56))  # Deve retornar False</code></pre>
+                </div>
+
+            <!-- Exercício 96 -->
+            <div class="exercicio-card">
+                <h3>96. Verificar Número Estrelado Heptacontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado heptacontagonal (pode ser representado como 70n² - 69n).</p>
+                <pre><code>def eh_estrelado_heptacontagonal(n):
+    # Verifica se n é um número estrelado heptacontagonal
+    i = 1
+    while True:
+        estrelado = 70 * i * i - 69 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_heptacontagonal(58))  # Deve retornar True
+print(eh_estrelado_heptacontagonal(59))  # Deve retornar False</code></pre>
+                    </div>
+
+            <!-- Exercício 97 -->
+            <div class="exercicio-card">
+                <h3>97. Verificar Número Estrelado Octacontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado octacontagonal (pode ser representado como 80n² - 79n).</p>
+                <pre><code>def eh_estrelado_octacontagonal(n):
+    # Verifica se n é um número estrelado octacontagonal
+    i = 1
+    while True:
+        estrelado = 80 * i * i - 79 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_octacontagonal(61))  # Deve retornar True
+print(eh_estrelado_octacontagonal(62))  # Deve retornar False</code></pre>
+                </div>
+
+            <!-- Exercício 98 -->
+            <div class="exercicio-card">
+                <h3>98. Verificar Número Estrelado Enneacontagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado enneacontagonal (pode ser representado como 90n² - 89n).</p>
+                <pre><code>def eh_estrelado_enneacontagonal(n):
+    # Verifica se n é um número estrelado enneacontagonal
+    i = 1
+    while True:
+        estrelado = 90 * i * i - 89 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_enneacontagonal(64))  # Deve retornar True
+print(eh_estrelado_enneacontagonal(65))  # Deve retornar False</code></pre>
+                    </div>
+
+            <!-- Exercício 99 -->
+            <div class="exercicio-card">
+                <h3>99. Verificar Número Estrelado Hectagonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado hectagonal (pode ser representado como 100n² - 99n).</p>
+                <pre><code>def eh_estrelado_hectagonal(n):
+    # Verifica se n é um número estrelado hectagonal
+    i = 1
+    while True:
+        estrelado = 100 * i * i - 99 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_hectagonal(67))  # Deve retornar True
+print(eh_estrelado_hectagonal(68))  # Deve retornar False</code></pre>
+                </div>
+
+            <!-- Exercício 100 -->
+            <div class="exercicio-card">
+                <h3>100. Verificar Número Estrelado Quilogonal</h3>
+                <p>Crie um programa que verifique se um número é um número estrelado quilogonal (pode ser representado como 1000n² - 999n).</p>
+                <pre><code>def eh_estrelado_quilogonal(n):
+    # Verifica se n é um número estrelado quilogonal
+    i = 1
+    while True:
+        estrelado = 1000 * i * i - 999 * i
+        if estrelado == n:
+            return True
+        if estrelado > n:
+            return False
+        i += 1
+
+# Testando com exemplos
+print(eh_estrelado_quilogonal(70))  # Deve retornar True
+print(eh_estrelado_quilogonal(71))  # Deve retornar False</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Apostila para lógica de programação</p>
+    </footer>
+</body>
+</html>

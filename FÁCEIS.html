@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Fáceis - Lógica de Programação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .exercicios-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .exercicio-card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+        .exercicio-card h3 {
+            color: var(--highlight-color);
+            margin-top: 0;
+        }
+        .exercicio-card p {
+            color: #CCC;
+            margin-bottom: 15px;
+        }
+        .exercicio-card pre {
+            background-color: #000;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .exercicio-card code {
+            color: #00FF00;
+            font-family: 'Consolas', monospace;
+        }
+    </style>
+    <script>
+        function toggleSolution(button) {
+            const solutionCode = button.nextElementSibling;
+            solutionCode.classList.toggle('show');
+            button.textContent = solutionCode.classList.contains('show') ? 'Ocultar Solução' : 'Mostrar Solução';
+        }
+    </script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <a href="index.html" class="back-button">← Voltar para Início</a>
+    </header>
+
+    <main>
+        <div class="card-hero">
+            <h1>Exercícios Fáceis <span class="pin">🪙</span></h1>
+            <p>Bem-vindo à seção de exercícios fáceis! Aqui você encontrará 100 exercícios práticos para desenvolver sua lógica de programação. Estes exercícios são perfeitos para iniciantes e ajudarão você a construir uma base sólida. Vamos começar? <span class="rocket">🚀</span></p>
+        </div>
+
+        <section class="exercicios-section">
+            <!-- Exercício 1 -->
+            <div class="exercicio-card">
+                <h3>1. Soma Simples</h3>
+                <p>Crie um programa que some dois números e exiba o resultado.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>a = 5
+b = 3
+soma = a + b
+print("A soma é:", soma)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 2 -->
+            <div class="exercicio-card">
+                <h3>2. Média Aritmética</h3>
+                <p>Crie um programa que calcule a média de três números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>n1 = 7
+n2 = 8
+n3 = 9
+media = (n1 + n2 + n3) / 3
+print("A média é:", media)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 3 -->
+            <div class="exercicio-card">
+                <h3>3. Verificar Par ou Ímpar</h3>
+                <p>Crie um programa que verifique se um número é par ou ímpar.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 10
+if numero % 2 == 0:
+    print("O número é par")
+else:
+    print("O número é ímpar")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 4 -->
+            <div class="exercicio-card">
+                <h3>4. Maior Número</h3>
+                <p>Crie um programa que encontre o maior número entre três valores.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>a = 15
+b = 8
+c = 12
+maior = max(a, b, c)
+print("O maior número é:", maior)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 5 -->
+            <div class="exercicio-card">
+                <h3>5. Contador</h3>
+                <p>Crie um programa que conte de 1 até 10.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>for i in range(1, 11):
+    print(i)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 6 -->
+            <div class="exercicio-card">
+                <h3>6. Tabuada</h3>
+                <p>Crie um programa que mostre a tabuada do número 5.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 5
+for i in range(1, 11):
+    print(f"{numero} x {i} = {numero * i}")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 7 -->
+            <div class="exercicio-card">
+                <h3>7. Verificar Idade</h3>
+                <p>Crie um programa que verifique se uma pessoa é maior de idade.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>idade = 18
+if idade >= 18:
+    print("Maior de idade")
+else:
+    print("Menor de idade")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 8 -->
+            <div class="exercicio-card">
+                <h3>8. Calcular Área do Retângulo</h3>
+                <p>Crie um programa que calcule a área de um retângulo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base = 5
+altura = 3
+area = base * altura
+print("A área do retângulo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 9 -->
+            <div class="exercicio-card">
+                <h3>9. Verificar Nota</h3>
+                <p>Crie um programa que verifique se uma nota é válida (entre 0 e 10).</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>nota = 7.5
+if 0 <= nota <= 10:
+    print("Nota válida")
+else:
+    print("Nota inválida")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 10 -->
+            <div class="exercicio-card">
+                <h3>10. Calcular IMC</h3>
+                <p>Crie um programa que calcule o IMC (Índice de Massa Corporal).</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>peso = 70
+altura = 1.75
+imc = peso / (altura ** 2)
+print("O IMC é:", imc)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 11 -->
+            <div class="exercicio-card">
+                <h3>11. Converter Celsius para Fahrenheit</h3>
+                <p>Crie um programa que converta uma temperatura de Celsius para Fahrenheit.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>celsius = 25
+fahrenheit = (celsius * 9/5) + 32
+print(f"{celsius}°C = {fahrenheit}°F")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 12 -->
+            <div class="exercicio-card">
+                <h3>12. Calcular Perímetro do Retângulo</h3>
+                <p>Crie um programa que calcule o perímetro de um retângulo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base = 5
+altura = 3
+perimetro = 2 * (base + altura)
+print("O perímetro é:", perimetro)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 13 -->
+            <div class="exercicio-card">
+                <h3>13. Verificar Múltiplo</h3>
+                <p>Crie um programa que verifique se um número é múltiplo de 5.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 15
+if numero % 5 == 0:
+    print("É múltiplo de 5")
+else:
+    print("Não é múltiplo de 5")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 14 -->
+            <div class="exercicio-card">
+                <h3>14. Calcular Volume do Cubo</h3>
+                <p>Crie um programa que calcule o volume de um cubo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>lado = 4
+volume = lado ** 3
+print("O volume do cubo é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 15 -->
+            <div class="exercicio-card">
+                <h3>15. Verificar Ano Bissexto</h3>
+                <p>Crie um programa que verifique se um ano é bissexto.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>ano = 2024
+if (ano % 4 == 0 and ano % 100 != 0) or (ano % 400 == 0):
+    print("É bissexto")
+else:
+    print("Não é bissexto")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 16 -->
+            <div class="exercicio-card">
+                <h3>16. Calcular Área do Círculo</h3>
+                <p>Crie um programa que calcule a área de um círculo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 5
+area = math.pi * raio ** 2
+print("A área do círculo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 17 -->
+            <div class="exercicio-card">
+                <h3>17. Verificar Triângulo</h3>
+                <p>Crie um programa que verifique se três lados podem formar um triângulo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>a = 3
+b = 4
+c = 5
+if a + b > c and a + c > b and b + c > a:
+    print("Pode formar um triângulo")
+else:
+    print("Não pode formar um triângulo")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 18 -->
+            <div class="exercicio-card">
+                <h3>18. Calcular Fatorial</h3>
+                <p>Crie um programa que calcule o fatorial de um número.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 5
+fatorial = 1
+for i in range(1, numero + 1):
+    fatorial *= i
+print(f"O fatorial de {numero} é:", fatorial)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 19 -->
+            <div class="exercicio-card">
+                <h3>19. Verificar Número Primo</h3>
+                <p>Crie um programa que verifique se um número é primo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 7
+primo = True
+for i in range(2, numero):
+    if numero % i == 0:
+        primo = False
+        break
+print("É primo" if primo else "Não é primo")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 20 -->
+            <div class="exercicio-card">
+                <h3>20. Calcular Soma dos Dígitos</h3>
+                <p>Crie um programa que calcule a soma dos dígitos de um número.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 123
+soma = sum(int(digito) for digito in str(numero))
+print("A soma dos dígitos é:", soma)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 21 -->
+            <div class="exercicio-card">
+                <h3>21. Verificar Palíndromo</h3>
+                <p>Crie um programa que verifique se uma palavra é um palíndromo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>palavra = "arara"
+if palavra == palavra[::-1]:
+    print("É palíndromo")
+else:
+    print("Não é palíndromo")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 22 -->
+            <div class="exercicio-card">
+                <h3>22. Calcular Média Ponderada</h3>
+                <p>Crie um programa que calcule a média ponderada de três notas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>nota1 = 8
+nota2 = 7
+nota3 = 9
+peso1 = 2
+peso2 = 3
+peso3 = 5
+media = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3)
+print("A média ponderada é:", media)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 23 -->
+            <div class="exercicio-card">
+                <h3>23. Verificar Vogal</h3>
+                <p>Crie um programa que verifique se uma letra é vogal.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>letra = 'a'
+if letra.lower() in 'aeiou':
+    print("É vogal")
+else:
+    print("Não é vogal")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 24 -->
+            <div class="exercicio-card">
+                <h3>24. Calcular Juros Simples</h3>
+                <p>Crie um programa que calcule juros simples.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>capital = 1000
+taxa = 0.05
+tempo = 2
+juros = capital * taxa * tempo
+print("Os juros são:", juros)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 25 -->
+            <div class="exercicio-card">
+                <h3>25. Verificar Mês</h3>
+                <p>Crie um programa que mostre o nome do mês baseado no número.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>mes = 3
+meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
+         'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+print(f"O mês é: {meses[mes-1]}")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 26 -->
+            <div class="exercicio-card">
+                <h3>26. Calcular Área do Triângulo</h3>
+                <p>Crie um programa que calcule a área de um triângulo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base = 6
+altura = 4
+area = (base * altura) / 2
+print("A área do triângulo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 27 -->
+            <div class="exercicio-card">
+                <h3>27. Verificar Nota Final</h3>
+                <p>Crie um programa que calcule a nota final de um aluno.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>nota1 = 7
+nota2 = 8
+nota3 = 6
+media = (nota1 + nota2 + nota3) / 3
+print(f"A média final é: {media:.1f}")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 28 -->
+            <div class="exercicio-card">
+                <h3>28. Calcular Volume da Esfera</h3>
+                <p>Crie um programa que calcule o volume de uma esfera.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 3
+volume = (4/3) * math.pi * raio ** 3
+print("O volume da esfera é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 29 -->
+            <div class="exercicio-card">
+                <h3>29. Verificar Sinal</h3>
+                <p>Crie um programa que verifique o sinal de um número.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = -5
+if numero > 0:
+    print("Positivo")
+elif numero < 0:
+    print("Negativo")
+else:
+    print("Zero")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 30 -->
+            <div class="exercicio-card">
+                <h3>30. Calcular Perímetro do Círculo</h3>
+                <p>Crie um programa que calcule o perímetro de um círculo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 4
+perimetro = 2 * math.pi * raio
+print("O perímetro do círculo é:", perimetro)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 31 -->
+            <div class="exercicio-card">
+                <h3>31. Verificar Múltiplos de 3 e 5</h3>
+                <p>Crie um programa que verifique se um número é múltiplo de 3 e 5.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 15
+if numero % 3 == 0 and numero % 5 == 0:
+    print("É múltiplo de 3 e 5")
+else:
+    print("Não é múltiplo de 3 e 5")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 32 -->
+            <div class="exercicio-card">
+                <h3>32. Calcular Área do Trapézio</h3>
+                <p>Crie um programa que calcule a área de um trapézio.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base_maior = 8
+base_menor = 4
+altura = 5
+area = ((base_maior + base_menor) * altura) / 2
+print("A área do trapézio é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 33 -->
+            <div class="exercicio-card">
+                <h3>33. Verificar Estação do Ano</h3>
+                <p>Crie um programa que mostre a estação do ano baseado no mês.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>mes = 7
+if 3 <= mes <= 5:
+    print("Outono")
+elif 6 <= mes <= 8:
+    print("Inverno")
+elif 9 <= mes <= 11:
+    print("Primavera")
+else:
+    print("Verão")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 34 -->
+            <div class="exercicio-card">
+                <h3>34. Calcular Volume do Cilindro</h3>
+                <p>Crie um programa que calcule o volume de um cilindro.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 3
+altura = 5
+volume = math.pi * raio ** 2 * altura
+print("O volume do cilindro é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 35 -->
+            <div class="exercicio-card">
+                <h3>35. Verificar Número Perfeito</h3>
+                <p>Crie um programa que verifique se um número é perfeito.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 6
+soma = 0
+for i in range(1, numero):
+    if numero % i == 0:
+        soma += i
+print("É perfeito" if soma == numero else "Não é perfeito")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 36 -->
+            <div class="exercicio-card">
+                <h3>36. Calcular Área do Losango</h3>
+                <p>Crie um programa que calcule a área de um losango.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>diagonal_maior = 8
+diagonal_menor = 6
+area = (diagonal_maior * diagonal_menor) / 2
+print("A área do losango é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 37 -->
+            <div class="exercicio-card">
+                <h3>37. Verificar Número Armstrong</h3>
+                <p>Crie um programa que verifique se um número é Armstrong.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 153
+digitos = [int(d) for d in str(numero)]
+soma = sum(d ** len(digitos) for d in digitos)
+print("É Armstrong" if soma == numero else "Não é Armstrong")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 38 -->
+            <div class="exercicio-card">
+                <h3>38. Calcular Área do Hexágono</h3>
+                <p>Crie um programa que calcule a área de um hexágono regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+lado = 5
+area = (3 * math.sqrt(3) * lado ** 2) / 2
+print("A área do hexágono é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 39 -->
+            <div class="exercicio-card">
+                <h3>39. Verificar Número Feliz</h3>
+                <p>Crie um programa que verifique se um número é feliz.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 7
+while numero != 1 and numero != 4:
+    numero = sum(int(d) ** 2 for d in str(numero))
+print("É feliz" if numero == 1 else "Não é feliz")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 40 -->
+            <div class="exercicio-card">
+                <h3>40. Calcular Volume do Cone</h3>
+                <p>Crie um programa que calcule o volume de um cone.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 3
+altura = 6
+volume = (math.pi * raio ** 2 * altura) / 3
+print("O volume do cone é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 41 -->
+            <div class="exercicio-card">
+                <h3>41. Verificar Número Capicua</h3>
+                <p>Crie um programa que verifique se um número é capicua.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 121
+if str(numero) == str(numero)[::-1]:
+    print("É capicua")
+else:
+    print("Não é capicua")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 42 -->
+            <div class="exercicio-card">
+                <h3>42. Calcular Área do Pentágono</h3>
+                <p>Crie um programa que calcule a área de um pentágono regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+lado = 4
+area = (5 * lado ** 2) / (4 * math.tan(math.pi / 5))
+print("A área do pentágono é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 43 -->
+            <div class="exercicio-card">
+                <h3>43. Verificar Número Abundante</h3>
+                <p>Crie um programa que verifique se um número é abundante.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 12
+soma = sum(i for i in range(1, numero) if numero % i == 0)
+print("É abundante" if soma > numero else "Não é abundante")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 44 -->
+            <div class="exercicio-card">
+                <h3>44. Calcular Volume da Pirâmide</h3>
+                <p>Crie um programa que calcule o volume de uma pirâmide.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base = 4
+altura = 6
+volume = (base ** 2 * altura) / 3
+print("O volume da pirâmide é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 45 -->
+            <div class="exercicio-card">
+                <h3>45. Verificar Número Defectivo</h3>
+                <p>Crie um programa que verifique se um número é defectivo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 10
+soma = sum(i for i in range(1, numero) if numero % i == 0)
+print("É defectivo" if soma < numero else "Não é defectivo")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 46 -->
+            <div class="exercicio-card">
+                <h3>46. Calcular Área do Octógono</h3>
+                <p>Crie um programa que calcule a área de um octógono regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+lado = 5
+area = 2 * (1 + math.sqrt(2)) * lado ** 2
+print("A área do octógono é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 47 -->
+            <div class="exercicio-card">
+                <h3>47. Verificar Número Narcisista</h3>
+                <p>Crie um programa que verifique se um número é narcisista.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 153
+digitos = [int(d) for d in str(numero)]
+soma = sum(d ** len(digitos) for d in digitos)
+print("É narcisista" if soma == numero else "Não é narcisista")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 48 -->
+            <div class="exercicio-card">
+                <h3>48. Calcular Volume do Prisma</h3>
+                <p>Crie um programa que calcule o volume de um prisma retangular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>comprimento = 5
+largura = 3
+altura = 4
+volume = comprimento * largura * altura
+print("O volume do prisma é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 49 -->
+            <div class="exercicio-card">
+                <h3>49. Verificar Número Amigável</h3>
+                <p>Crie um programa que verifique se dois números são amigáveis.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>a = 220
+b = 284
+def soma_divisores(n):
+    return sum(i for i in range(1, n) if n % i == 0)
+print("São amigáveis" if soma_divisores(a) == b and soma_divisores(b) == a else "Não são amigáveis")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 50 -->
+            <div class="exercicio-card">
+                <h3>50. Calcular Área do Decágono</h3>
+                <p>Crie um programa que calcule a área de um decágono regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+lado = 4
+area = (5 * lado ** 2) / (2 * math.tan(math.pi / 10))
+print("A área do decágono é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 51 -->
+            <div class="exercicio-card">
+                <h3>51. Verificar Número Triangular</h3>
+                <p>Crie um programa que verifique se um número é triangular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 10
+n = 1
+while n * (n + 1) / 2 < numero:
+    n += 1
+print("É triangular" if n * (n + 1) / 2 == numero else "Não é triangular")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 52 -->
+            <div class="exercicio-card">
+                <h3>52. Calcular Volume do Paralelepípedo</h3>
+                <p>Crie um programa que calcule o volume de um paralelepípedo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>comprimento = 6
+largura = 4
+altura = 3
+volume = comprimento * largura * altura
+print("O volume do paralelepípedo é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 53 -->
+            <div class="exercicio-card">
+                <h3>53. Verificar Número Harshad</h3>
+                <p>Crie um programa que verifique se um número é Harshad.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 18
+soma_digitos = sum(int(d) for d in str(numero))
+print("É Harshad" if numero % soma_digitos == 0 else "Não é Harshad")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 54 -->
+            <div class="exercicio-card">
+                <h3>54. Calcular Área do Paralelogramo</h3>
+                <p>Crie um programa que calcule a área de um paralelogramo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base = 5
+altura = 4
+area = base * altura
+print("A área do paralelogramo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 55 -->
+            <div class="exercicio-card">
+                <h3>55. Verificar Número Automórfico</h3>
+                <p>Crie um programa que verifique se um número é automórfico.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 25
+quadrado = numero ** 2
+print("É automórfico" if str(quadrado).endswith(str(numero)) else "Não é automórfico")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 56 -->
+            <div class="exercicio-card">
+                <h3>56. Calcular Volume do Tetraedro</h3>
+                <p>Crie um programa que calcule o volume de um tetraedro regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+aresta = 5
+volume = (aresta ** 3) / (6 * math.sqrt(2))
+print("O volume do tetraedro é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 57 -->
+            <div class="exercicio-card">
+                <h3>57. Verificar Número Despojado</h3>
+                <p>Crie um programa que verifique se um número é despojado.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 30
+fatores = set()
+for i in range(2, numero + 1):
+    while numero % i == 0:
+        fatores.add(i)
+        numero //= i
+print("É despojado" if len(fatores) == 2 else "Não é despojado")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 58 -->
+            <div class="exercicio-card">
+                <h3>58. Calcular Área do Triângulo Equilátero</h3>
+                <p>Crie um programa que calcule a área de um triângulo equilátero.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+lado = 6
+area = (math.sqrt(3) * lado ** 2) / 4
+print("A área do triângulo equilátero é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 59 -->
+            <div class="exercicio-card">
+                <h3>59. Verificar Número Circular</h3>
+                <p>Crie um programa que verifique se um número é circular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 197
+def is_prime(n):
+    return n > 1 and all(n % i != 0 for i in range(2, int(n ** 0.5) + 1))
+digitos = str(numero)
+circular = True
+for i in range(len(digitos)):
+    if not is_prime(int(digitos[i:] + digitos[:i])):
+        circular = False
+        break
+print("É circular" if circular else "Não é circular")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 60 -->
+            <div class="exercicio-card">
+                <h3>60. Calcular Volume do Dodecaedro</h3>
+                <p>Crie um programa que calcule o volume de um dodecaedro regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+aresta = 4
+volume = (15 + 7 * math.sqrt(5)) * aresta ** 3 / 4
+print("O volume do dodecaedro é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 61 -->
+            <div class="exercicio-card">
+                <h3>61. Verificar Número Estrobogramático</h3>
+                <p>Crie um programa que verifique se um número é estrobogramático.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = "69"
+valido = {'0':'0', '1':'1', '6':'9', '8':'8', '9':'6'}
+print("É estrobogramático" if all(c in valido and valido[c] == numero[-i-1] for i, c in enumerate(numero)) else "Não é estrobogramático")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 62 -->
+            <div class="exercicio-card">
+                <h3>62. Calcular Área do Triângulo Isósceles</h3>
+                <p>Crie um programa que calcule a área de um triângulo isósceles.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+base = 6
+lado = 5
+altura = math.sqrt(lado ** 2 - (base/2) ** 2)
+area = (base * altura) / 2
+print("A área do triângulo isósceles é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 63 -->
+            <div class="exercicio-card">
+                <h3>63. Verificar Número Fibonacci</h3>
+                <p>Crie um programa que verifique se um número pertence à sequência Fibonacci.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 21
+a, b = 0, 1
+while b < numero:
+    a, b = b, a + b
+print("É Fibonacci" if b == numero else "Não é Fibonacci")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 64 -->
+            <div class="exercicio-card">
+                <h3>64. Calcular Volume do Icosaedro</h3>
+                <p>Crie um programa que calcule o volume de um icosaedro regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+aresta = 4
+volume = (5 * (3 + math.sqrt(5)) * aresta ** 3) / 12
+print("O volume do icosaedro é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 65 -->
+            <div class="exercicio-card">
+                <h3>65. Verificar Número Gapful</h3>
+                <p>Crie um programa que verifique se um número é gapful.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 192
+primeiro = int(str(numero)[0])
+ultimo = numero % 10
+print("É gapful" if numero % (primeiro * 10 + ultimo) == 0 else "Não é gapful")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 66 -->
+            <div class="exercicio-card">
+                <h3>66. Calcular Área do Triângulo Escaleno</h3>
+                <p>Crie um programa que calcule a área de um triângulo escaleno usando a fórmula de Heron.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+a = 5
+b = 6
+c = 7
+s = (a + b + c) / 2
+area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+print("A área do triângulo escaleno é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 67 -->
+            <div class="exercicio-card">
+                <h3>67. Verificar Número Harshad Mórfico</h3>
+                <p>Crie um programa que verifique se um número é Harshad mórfico.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 18
+soma_digitos = sum(int(d) for d in str(numero))
+if numero % soma_digitos == 0:
+    reverso = int(str(numero)[::-1])
+    soma_reverso = sum(int(d) for d in str(reverso))
+    print("É Harshad mórfico" if reverso % soma_reverso == 0 else "Não é Harshad mórfico")
+else:
+    print("Não é Harshad mórfico")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 68 -->
+            <div class="exercicio-card">
+                <h3>68. Calcular Volume do Octaedro</h3>
+                <p>Crie um programa que calcule o volume de um octaedro regular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+aresta = 4
+volume = (math.sqrt(2) * aresta ** 3) / 3
+print("O volume do octaedro é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 69 -->
+            <div class="exercicio-card">
+                <h3>69. Verificar Número Keith</h3>
+                <p>Crie um programa que verifique se um número é Keith.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 197
+sequencia = [int(d) for d in str(numero)]
+while sequencia[-1] < numero:
+    sequencia.append(sum(sequencia[-len(str(numero)):]))
+print("É Keith" if numero in sequencia else "Não é Keith")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 70 -->
+            <div class="exercicio-card">
+                <h3>70. Calcular Área do Triângulo Retângulo</h3>
+                <p>Crie um programa que calcule a área de um triângulo retângulo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base = 6
+altura = 8
+area = (base * altura) / 2
+print("A área do triângulo retângulo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 71 -->
+            <div class="exercicio-card">
+                <h3>71. Verificar Número Lychrel</h3>
+                <p>Crie um programa que verifique se um número é Lychrel.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 196
+def is_palindrome(n):
+    return str(n) == str(n)[::-1]
+n = numero
+for _ in range(50):
+    n += int(str(n)[::-1])
+    if is_palindrome(n):
+        print("Não é Lychrel")
+        break
+else:
+    print("É Lychrel")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 72 -->
+            <div class="exercicio-card">
+                <h3>72. Calcular Volume do Prisma</h3>
+                <p>Crie um programa que calcule o volume de um prisma.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>area_base = 20
+altura = 5
+volume = area_base * altura
+print("O volume do prisma é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 73 -->
+            <div class="exercicio-card">
+                <h3>73. Verificar Número Narcisista</h3>
+                <p>Crie um programa que verifique se um número é narcisista.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 153
+digitos = len(str(numero))
+soma = sum(int(d) ** digitos for d in str(numero))
+print("É narcisista" if soma == numero else "Não é narcisista")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 74 -->
+            <div class="exercicio-card">
+                <h3>74. Calcular Área do Trapézio</h3>
+                <p>Crie um programa que calcule a área de um trapézio.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>base_maior = 8
+base_menor = 4
+altura = 5
+area = ((base_maior + base_menor) * altura) / 2
+print("A área do trapézio é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 75 -->
+            <div class="exercicio-card">
+                <h3>75. Verificar Número Perfeito</h3>
+                <p>Crie um programa que verifique se um número é perfeito.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 28
+soma_divisores = sum(i for i in range(1, numero) if numero % i == 0)
+print("É perfeito" if soma_divisores == numero else "Não é perfeito")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 76 -->
+            <div class="exercicio-card">
+                <h3>76. Calcular Volume do Cilindro</h3>
+                <p>Crie um programa que calcule o volume de um cilindro.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 3
+altura = 5
+volume = math.pi * raio ** 2 * altura
+print("O volume do cilindro é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 77 -->
+            <div class="exercicio-card">
+                <h3>77. Verificar Número Polidivisível</h3>
+                <p>Crie um programa que verifique se um número é polidivisível.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 381654729
+digitos = str(numero)
+valido = True
+for i in range(1, len(digitos) + 1):
+    if int(digitos[:i]) % i != 0:
+        valido = False
+        break
+print("É polidivisível" if valido else "Não é polidivisível")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 78 -->
+            <div class="exercicio-card">
+                <h3>78. Calcular Área do Losango</h3>
+                <p>Crie um programa que calcule a área de um losango.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>diagonal_maior = 8
+diagonal_menor = 6
+area = (diagonal_maior * diagonal_menor) / 2
+print("A área do losango é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 79 -->
+            <div class="exercicio-card">
+                <h3>79. Verificar Número Prático</h3>
+                <p>Crie um programa que verifique se um número é prático.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 12
+divisores = [i for i in range(1, numero + 1) if numero % i == 0]
+pratico = True
+for i in range(1, numero + 1):
+    if not any(sum(combo) == i for combo in itertools.combinations(divisores, len(divisores))):
+        pratico = False
+        break
+print("É prático" if pratico else "Não é prático")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 80 -->
+            <div class="exercicio-card">
+                <h3>80. Calcular Volume do Cone</h3>
+                <p>Crie um programa que calcule o volume de um cone.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 3
+altura = 5
+volume = (math.pi * raio ** 2 * altura) / 3
+print("O volume do cone é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 81 -->
+            <div class="exercicio-card">
+                <h3>81. Verificar Número Repunit</h3>
+                <p>Crie um programa que verifique se um número é repunit.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 111
+print("É repunit" if all(d == '1' for d in str(numero)) else "Não é repunit")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 82 -->
+            <div class="exercicio-card">
+                <h3>82. Calcular Área do Círculo</h3>
+                <p>Crie um programa que calcule a área de um círculo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 5
+area = math.pi * raio ** 2
+print("A área do círculo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 83 -->
+            <div class="exercicio-card">
+                <h3>83. Verificar Número Smith</h3>
+                <p>Crie um programa que verifique se um número é Smith.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 378
+def soma_digitos(n):
+    return sum(int(d) for d in str(n))
+def fatores_primos(n):
+    fatores = []
+    i = 2
+    while n > 1:
+        while n % i == 0:
+            fatores.append(i)
+            n //= i
+        i += 1
+    return fatores
+soma_numero = soma_digitos(numero)
+soma_fatores = sum(soma_digitos(f) for f in fatores_primos(numero))
+print("É Smith" if soma_numero == soma_fatores else "Não é Smith")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 84 -->
+            <div class="exercicio-card">
+                <h3>84. Calcular Volume da Esfera</h3>
+                <p>Crie um programa que calcule o volume de uma esfera.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 4
+volume = (4 * math.pi * raio ** 3) / 3
+print("O volume da esfera é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 85 -->
+            <div class="exercicio-card">
+                <h3>85. Verificar Número Sphenic</h3>
+                <p>Crie um programa que verifique se um número é sphenic.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 30
+fatores = set()
+for i in range(2, numero + 1):
+    while numero % i == 0:
+        fatores.add(i)
+        numero //= i
+print("É sphenic" if len(fatores) == 3 else "Não é sphenic")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 86 -->
+            <div class="exercicio-card">
+                <h3>86. Calcular Área do Setor Circular</h3>
+                <p>Crie um programa que calcule a área de um setor circular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 5
+angulo = 60  # em graus
+area = (math.pi * raio ** 2 * angulo) / 360
+print("A área do setor circular é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 87 -->
+            <div class="exercicio-card">
+                <h3>87. Verificar Número Estrela</h3>
+                <p>Crie um programa que verifique se um número é estrela.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 13
+n = 1
+while n * (n - 1) * 6 + 1 < numero:
+    n += 1
+print("É estrela" if n * (n - 1) * 6 + 1 == numero else "Não é estrela")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 88 -->
+            <div class="exercicio-card">
+                <h3>88. Calcular Volume da Pirâmide</h3>
+                <p>Crie um programa que calcule o volume de uma pirâmide.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>area_base = 25
+altura = 6
+volume = (area_base * altura) / 3
+print("O volume da pirâmide é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 89 -->
+            <div class="exercicio-card">
+                <h3>89. Verificar Número Tetraédrico</h3>
+                <p>Crie um programa que verifique se um número é tetraédrico.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 20
+n = 1
+while n * (n + 1) * (n + 2) / 6 < numero:
+    n += 1
+print("É tetraédrico" if n * (n + 1) * (n + 2) / 6 == numero else "Não é tetraédrico")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 90 -->
+            <div class="exercicio-card">
+                <h3>90. Calcular Área do Segmento Circular</h3>
+                <p>Crie um programa que calcule a área de um segmento circular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 5
+angulo = 60  # em graus
+area_setor = (math.pi * raio ** 2 * angulo) / 360
+area_triangulo = (raio ** 2 * math.sin(math.radians(angulo))) / 2
+area_segmento = area_setor - area_triangulo
+print("A área do segmento circular é:", area_segmento)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 91 -->
+            <div class="exercicio-card">
+                <h3>91. Verificar Número Triangular Centrado</h3>
+                <p>Crie um programa que verifique se um número é triangular centrado.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 19
+n = 1
+while (3 * n * n - 3 * n + 2) / 2 < numero:
+    n += 1
+print("É triangular centrado" if (3 * n * n - 3 * n + 2) / 2 == numero else "Não é triangular centrado")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 92 -->
+            <div class="exercicio-card">
+                <h3>92. Calcular Volume do Tronco de Cone</h3>
+                <p>Crie um programa que calcule o volume de um tronco de cone.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio_maior = 5
+raio_menor = 3
+altura = 4
+volume = (math.pi * altura * (raio_maior ** 2 + raio_maior * raio_menor + raio_menor ** 2)) / 3
+print("O volume do tronco de cone é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 93 -->
+            <div class="exercicio-card">
+                <h3>93. Verificar Número Pentagonal</h3>
+                <p>Crie um programa que verifique se um número é pentagonal.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 35
+n = 1
+while n * (3 * n - 1) / 2 < numero:
+    n += 1
+print("É pentagonal" if n * (3 * n - 1) / 2 == numero else "Não é pentagonal")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 94 -->
+            <div class="exercicio-card">
+                <h3>94. Calcular Área da Coroa Circular</h3>
+                <p>Crie um programa que calcule a área de uma coroa circular.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio_externo = 6
+raio_interno = 4
+area = math.pi * (raio_externo ** 2 - raio_interno ** 2)
+print("A área da coroa circular é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 95 -->
+            <div class="exercicio-card">
+                <h3>95. Verificar Número Hexagonal</h3>
+                <p>Crie um programa que verifique se um número é hexagonal.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 45
+n = 1
+while n * (2 * n - 1) < numero:
+    n += 1
+print("É hexagonal" if n * (2 * n - 1) == numero else "Não é hexagonal")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 96 -->
+            <div class="exercicio-card">
+                <h3>96. Calcular Volume do Tronco de Pirâmide</h3>
+                <p>Crie um programa que calcule o volume de um tronco de pirâmide.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>area_base_maior = 36
+area_base_menor = 16
+altura = 5
+volume = (altura * (area_base_maior + math.sqrt(area_base_maior * area_base_menor) + area_base_menor)) / 3
+print("O volume do tronco de pirâmide é:", volume)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 97 -->
+            <div class="exercicio-card">
+                <h3>97. Verificar Número Heptagonal</h3>
+                <p>Crie um programa que verifique se um número é heptagonal.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 55
+n = 1
+while n * (5 * n - 3) / 2 < numero:
+    n += 1
+print("É heptagonal" if n * (5 * n - 3) / 2 == numero else "Não é heptagonal")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 98 -->
+            <div class="exercicio-card">
+                <h3>98. Calcular Área do Triângulo de Heron</h3>
+                <p>Crie um programa que calcule a área de um triângulo usando a fórmula de Heron.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+a = 5
+b = 6
+c = 7
+s = (a + b + c) / 2
+area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+print("A área do triângulo é:", area)</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 99 -->
+            <div class="exercicio-card">
+                <h3>99. Verificar Número Octagonal</h3>
+                <p>Crie um programa que verifique se um número é octagonal.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numero = 65
+n = 1
+while n * (3 * n - 2) < numero:
+    n += 1
+print("É octagonal" if n * (3 * n - 2) == numero else "Não é octagonal")</code></pre>
+                </div>
+            </div>
+
+            <!-- Exercício 100 -->
+            <div class="exercicio-card">
+                <h3>100. Calcular Volume do Tronco de Cilindro</h3>
+                <p>Crie um programa que calcule o volume de um tronco de cilindro.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+raio = 4
+altura_maior = 8
+altura_menor = 5
+volume = math.pi * raio ** 2 * (altura_maior + altura_menor) / 2
+print("O volume do tronco de cilindro é:", volume)</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Apostila para lógica de programação</p>
+    </footer>
+</body>
+</html> 
