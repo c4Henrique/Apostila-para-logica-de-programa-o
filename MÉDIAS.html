@@ -293,1388 +293,1303 @@ print(f"A letra '{letra}' aparece {contagem} vezes")</code></pre>
 
             <!-- Exercício 17 -->
             <div class="exercicio-card">
-                <h3>17. Ordenar Lista</h3>
-                <p>Crie um programa que ordene uma lista em ordem crescente.</p>
-                <pre><code>lista = [5, 2, 8, 1, 9]
-lista_ordenada = sorted(lista)
-print("Lista ordenada:", lista_ordenada)</code></pre>
+                <h3>17. Calcular Média</h3>
+                <p>Crie um programa que calcule a média de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numeros = [10, 20, 30, 40, 50]
+media = sum(numeros) / len(numeros)
+print("Média:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 18 -->
             <div class="exercicio-card">
-                <h3>18. Quadrado Mágico Simples</h3>
-                <p>Crie um programa que verifique se uma matriz 3x3 é um quadrado mágico.</p>
-                <pre><code>matriz = [
-    [8, 1, 6],
-    [3, 5, 7],
-    [4, 9, 2]
-]
-soma_linha1 = sum(matriz[0])
-soma_linha2 = sum(matriz[1])
-soma_linha3 = sum(matriz[2])
-print("É quadrado mágico?" if soma_linha1 == soma_linha2 == soma_linha3 else "Não é quadrado mágico")</code></pre>
+                <h3>18. Encontrar Moda</h3>
+                <p>Crie um programa que encontre a moda (número mais frequente) em uma lista.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>from collections import Counter
+numeros = [1, 2, 2, 3, 2, 4, 5]
+moda = Counter(numeros).most_common(1)[0][0]
+print("Moda:", moda)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 19 -->
             <div class="exercicio-card">
-                <h3>19. Agrupar Pares e Ímpares</h3>
-                <p>Crie um programa que separe números pares e ímpares em duas listas.</p>
-                <pre><code>numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-pares = [n for n in numeros if n % 2 == 0]
-impares = [n for n in numeros if n % 2 != 0]
-print("Pares:", pares)
-print("Ímpares:", impares)</code></pre>
+                <h3>19. Calcular Mediana</h3>
+                <p>Crie um programa que calcule a mediana de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numeros = [1, 3, 2, 5, 4]
+numeros.sort()
+n = len(numeros)
+if n % 2 == 0:
+    mediana = (numeros[n//2 - 1] + numeros[n//2]) / 2
+else:
+    mediana = numeros[n//2]
+print("Mediana:", mediana)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 20 -->
             <div class="exercicio-card">
-                <h3>20. Fatorial de um Número</h3>
-                <p>Crie um programa que calcule o fatorial de um número usando recursão.</p>
-                <pre><code>def fatorial(n):
-    return 1 if n <= 1 else n * fatorial(n-1)
-
-n = 7
-print(f"Fatorial de {n}:", fatorial(n))</code></pre>
+                <h3>20. Calcular Desvio Padrão</h3>
+                <p>Crie um programa que calcule o desvio padrão de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import statistics
+numeros = [2, 4, 4, 4, 5, 5, 7, 9]
+desvio = statistics.stdev(numeros)
+print("Desvio Padrão:", desvio)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 21 -->
             <div class="exercicio-card">
-                <h3>21. Verificar Primo</h3>
-                <p>Crie um programa que verifique se o número 50 é primo.</p>
-                <pre><code>n = 50
-eh_primo = True
-if n < 2:
-    eh_primo = False
-else:
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            eh_primo = False
-            break
-print("É primo?", eh_primo)</code></pre>
+                <h3>21. Calcular Variância</h3>
+                <p>Crie um programa que calcule a variância de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import statistics
+numeros = [2, 4, 4, 4, 5, 5, 7, 9]
+variancia = statistics.variance(numeros)
+print("Variância:", variancia)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 22 -->
             <div class="exercicio-card">
-                <h3>22. Contar Vogais</h3>
-                <p>Crie um programa que conte quantas vogais há na palavra 'programador'.</p>
-                <pre><code>texto = "programador"
-vogais = "aeiou"
-contador = sum(1 for letra in texto if letra in vogais)
-print("Quantidade de vogais:", contador)</code></pre>
+                <h3>22. Calcular Média Ponderada</h3>
+                <p>Crie um programa que calcule a média ponderada de notas com seus respectivos pesos.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [8, 7, 9]
+pesos = [2, 3, 1]
+media_ponderada = sum(n * p for n, p in zip(notas, pesos)) / sum(pesos)
+print("Média Ponderada:", media_ponderada)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 23 -->
             <div class="exercicio-card">
-                <h3>23. Inverter String</h3>
-                <p>Crie um programa que inverta a string 'python'.</p>
-                <pre><code>texto = "python"
-invertido = texto[::-1]
-print("Invertido:", invertido)</code></pre>
+                <h3>23. Calcular Média Harmônica</h3>
+                <p>Crie um programa que calcule a média harmônica de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>from statistics import harmonic_mean
+numeros = [1, 2, 4, 8]
+media_harmonica = harmonic_mean(numeros)
+print("Média Harmônica:", media_harmonica)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 24 -->
             <div class="exercicio-card">
-                <h3>24. Soma dos Pares</h3>
-                <p>Crie um programa que some todos os números pares de 1 a 100.</p>
-                <pre><code>soma = sum(i for i in range(1, 101) if i % 2 == 0)
-print("Soma dos pares:", soma)</code></pre>
+                <h3>24. Calcular Média Geométrica</h3>
+                <p>Crie um programa que calcule a média geométrica de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>from statistics import geometric_mean
+numeros = [1, 2, 4, 8]
+media_geometrica = geometric_mean(numeros)
+print("Média Geométrica:", media_geometrica)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 25 -->
             <div class="exercicio-card">
-                <h3>25. Fibonacci até N</h3>
-                <p>Crie um programa que imprima os primeiros 9 termos da sequência de Fibonacci.</p>
-                <pre><code>n = 9
-a, b = 0, 1
-for _ in range(n):
-    print(a)
-    a, b = b, a + b</code></pre>
+                <h3>25. Calcular Quartis</h3>
+                <p>Crie um programa que calcule os quartis de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import numpy as np
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+q1, q2, q3 = np.percentile(numeros, [25, 50, 75])
+print(f"Q1: {q1}, Q2: {q2}, Q3: {q3}")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 26 -->
             <div class="exercicio-card">
-                <h3>26. Soma dos Dígitos</h3>
-                <p>Crie um programa que calcule a soma dos dígitos do número 990.</p>
-                <pre><code>n = 990
-soma = sum(int(d) for d in str(n))
-print("Soma dos dígitos:", soma)</code></pre>
+                <h3>26. Calcular Amplitude</h3>
+                <p>Crie um programa que calcule a amplitude (diferença entre maior e menor valor) de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>numeros = [10, 20, 30, 40, 50]
+amplitude = max(numeros) - min(numeros)
+print("Amplitude:", amplitude)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 27 -->
             <div class="exercicio-card">
-                <h3>27. Múltiplos de 3 e 5</h3>
-                <p>Crie um programa que exiba os múltiplos de 3 ou 5 entre 1 e 50.</p>
-                <pre><code>for i in range(1, 51):
-    if i % 3 == 0 or i % 5 == 0:
-        print(i)</code></pre>
+                <h3>27. Calcular Coeficiente de Variação</h3>
+                <p>Crie um programa que calcule o coeficiente de variação de uma lista de números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import statistics
+numeros = [10, 20, 30, 40, 50]
+cv = statistics.stdev(numeros) / statistics.mean(numeros)
+print("Coeficiente de Variação:", cv)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 28 -->
             <div class="exercicio-card">
-                <h3>28. Números Perfeitos</h3>
-                <p>Crie um programa que verifique se 28 é um número perfeito.</p>
-                <pre><code>n = 28
-soma = sum(i for i in range(1, n) if n % i == 0)
-print("É perfeito?", soma == n)</code></pre>
+                <h3>28. Calcular Média Trimestral</h3>
+                <p>Crie um programa que calcule a média trimestral de notas de um aluno.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media_trimestral = sum(notas) / len(notas)
+print("Média Trimestral:", media_trimestral)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 29 -->
             <div class="exercicio-card">
-                <h3>29. Contagem Regressiva</h3>
-                <p>Crie um programa que faça uma contagem regressiva de 10 até 1.</p>
-                <pre><code>for i in range(10, 0, -1):
-    print(i)</code></pre>
+                <h3>29. Calcular Média Anual</h3>
+                <p>Crie um programa que calcule a média anual de notas de um aluno.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5, 7.0, 8.5]
+media_anual = sum(notas) / len(notas)
+print("Média Anual:", media_anual)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 30 -->
             <div class="exercicio-card">
-                <h3>30. Palíndromo</h3>
-                <p>Crie um programa que verifique se a palavra 'radar' é um palíndromo.</p>
-                <pre><code>texto = "radar"
-if texto == texto[::-1]:
-    print("É palíndromo")
-else:
-    print("Não é palíndromo")</code></pre>
+                <h3>30. Calcular Média com Recuperação</h3>
+                <p>Crie um programa que calcule a média final considerando a nota de recuperação.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>nota_regular = 6.0
+nota_recuperacao = 8.0
+media_final = (nota_regular + nota_recuperacao) / 2
+print("Média Final:", media_final)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 31 -->
             <div class="exercicio-card">
-                <h3>31. Maior e Menor da Lista</h3>
-                <p>Crie um programa que encontre o maior e o menor número da lista [22, 50, 1, 4, 23].</p>
-                <pre><code>lista = [22, 50, 1, 4, 23]
-print("Maior:", max(lista))
-print("Menor:", min(lista))</code></pre>
+                <h3>31. Calcular Média de Notas com Pesos Diferentes</h3>
+                <p>Crie um programa que calcule a média de notas com pesos diferentes para cada bimestre.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+pesos = [1, 2, 2, 3]
+media_ponderada = sum(n * p for n, p in zip(notas, pesos)) / sum(pesos)
+print("Média Ponderada:", media_ponderada)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 32 -->
             <div class="exercicio-card">
-                <h3>32. Produto de Números</h3>
-                <p>Crie um programa que calcule o produto dos números de 1 até 6.</p>
-                <pre><code>n = 6
-produto = 1
-for i in range(1, n + 1):
-    produto *= i
-print("Produto:", produto)</code></pre>
+                <h3>32. Calcular Média de Temperaturas</h3>
+                <p>Crie um programa que calcule a média de temperaturas de uma semana.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>temperaturas = [25, 26, 24, 27, 25, 28, 26]
+media_temp = sum(temperaturas) / len(temperaturas)
+print("Média de Temperaturas:", media_temp)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 33 -->
             <div class="exercicio-card">
-                <h3>33. Verificar Substring</h3>
-                <p>Crie um programa que verifique se a substring 'grama' está presente na string 'programacao'.</p>
-                <pre><code>texto = "programacao"
-sub = "grama"
-print(sub in texto)</code></pre>
+                <h3>33. Calcular Média de Consumo de Combustível</h3>
+                <p>Crie um programa que calcule a média de consumo de combustível de um veículo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>km = 500
+litros = 50
+media_consumo = km / litros
+print("Média de Consumo:", media_consumo, "km/l")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 34 -->
             <div class="exercicio-card">
-                <h3>34. Remover Duplicatas</h3>
-                <p>Crie um programa que remova os valores duplicados da lista [1, 2, 2, 3, 4, 4, 5].</p>
-                <pre><code>lista = [1, 2, 2, 3, 4, 4, 5]
-lista_sem_duplicatas = list(set(lista))
-print(lista_sem_duplicatas)</code></pre>
+                <h3>34. Calcular Média de Velocidade</h3>
+                <p>Crie um programa que calcule a média de velocidade de um veículo em diferentes trechos.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>velocidades = [60, 80, 70, 90, 75]
+media_velocidade = sum(velocidades) / len(velocidades)
+print("Média de Velocidade:", media_velocidade, "km/h")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 35 -->
             <div class="exercicio-card">
-                <h3>35. Comparar Strings</h3>
-                <p>Crie um programa que compare se as strings 'código' e 'código' são iguais.</p>
-                <pre><code>a = "código"
-b = "código"
-print("São iguais?", a == b)</code></pre>
+                <h3>35. Calcular Média de Preços</h3>
+                <p>Crie um programa que calcule a média de preços de produtos.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>precos = [10.50, 15.75, 20.25, 18.90, 12.30]
+media_precos = sum(precos) / len(precos)
+print("Média de Preços: R$", round(media_precos, 2))</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 36 -->
             <div class="exercicio-card">
-                <h3>36. Contagem de Letras</h3>
-                <p>Crie um programa que conte quantas vezes a letra 'e' aparece na palavra 'desenvolvimento'.</p>
-                <pre><code>palavra = "desenvolvimento"
-letra = "e"
-print("Quantidade:", palavra.count(letra))</code></pre>
+                <h3>36. Calcular Média de Idades</h3>
+                <p>Crie um programa que calcule a média de idades de um grupo de pessoas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>idades = [25, 30, 35, 40, 45]
+media_idades = sum(idades) / len(idades)
+print("Média de Idades:", media_idades)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 37 -->
             <div class="exercicio-card">
-                <h3>37. Ordenar Lista</h3>
-                <p>Crie um programa que ordene a lista [9, 1, 5, 3, 7] em ordem crescente.</p>
-                <pre><code>lista = [9, 1, 5, 3, 7]
-lista.sort()
-print(lista)</code></pre>
+                <h3>37. Calcular Média de Alturas</h3>
+                <p>Crie um programa que calcule a média de alturas de um grupo de pessoas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>alturas = [1.70, 1.75, 1.80, 1.65, 1.85]
+media_alturas = sum(alturas) / len(alturas)
+print("Média de Alturas:", round(media_alturas, 2), "m")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 38 -->
             <div class="exercicio-card">
-                <h3>38. Quadrado Mágico Simples</h3>
-                <p>Crie um programa que verifique se a matriz 3x3 abaixo é um quadrado mágico.</p>
-                <pre><code>matriz = [[8, 1, 6], [3, 5, 7], [4, 9, 2]]
-soma = sum(matriz[0])
-eh_magico = all(sum(linha) == soma for linha in matriz) and all(sum(col) == soma for col in zip(*matriz))
-print("É quadrado mágico?", eh_magico)</code></pre>
+                <h3>38. Calcular Média de Pesos</h3>
+                <p>Crie um programa que calcule a média de pesos de um grupo de pessoas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>pesos = [70, 75, 80, 65, 85]
+media_pesos = sum(pesos) / len(pesos)
+print("Média de Pesos:", media_pesos, "kg")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 39 -->
             <div class="exercicio-card">
-                <h3>39. Agrupar Pares e Ímpares</h3>
-                <p>Crie um programa que separe os números pares e ímpares da lista [1, 2, 3, 4, 5, 6, 7].</p>
-                <pre><code>lista = [1, 2, 3, 4, 5, 6, 7]
-pares = [n for n in lista if n % 2 == 0]
-impares = [n for n in lista if n % 2 != 0]
-print("Pares:", pares)
-print("Ímpares:", impares)</code></pre>
+                <h3>39. Calcular Média de Salários</h3>
+                <p>Crie um programa que calcule a média de salários de uma empresa.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>salarios = [2500, 3000, 3500, 4000, 4500]
+media_salarios = sum(salarios) / len(salarios)
+print("Média de Salários: R$", media_salarios)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 40 -->
             <div class="exercicio-card">
-                <h3>40. Fatorial de um Número</h3>
-                <p>Crie um programa que calcule o fatorial do número 4.</p>
-                <pre><code>n = 4
-fatorial = 1
-for i in range(1, n + 1):
-    fatorial *= i
-print("Fatorial:", fatorial)</code></pre>
+                <h3>40. Calcular Média de Vendas</h3>
+                <p>Crie um programa que calcule a média de vendas diárias de uma loja.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>vendas = [1000, 1500, 2000, 1800, 2200]
+media_vendas = sum(vendas) / len(vendas)
+print("Média de Vendas: R$", media_vendas)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 41 -->
             <div class="exercicio-card">
-                <h3>41. Matriz Transposta</h3>
-                <p>Crie um programa que calcule a matriz transposta de uma matriz 3x3.</p>
-                <pre><code># Criando uma matriz 3x3
-matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-# Calculando a matriz transposta
-transposta = [[matriz[j][i] for j in range(len(matriz))] for i in range(len(matriz[0]))]
-
-# Exibindo o resultado
-print("Matriz transposta:", transposta)</code></pre>
+                <h3>41. Calcular Média de Produção</h3>
+                <p>Crie um programa que calcule a média de produção diária de uma fábrica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>producao = [100, 120, 90, 110, 130]
+media_producao = sum(producao) / len(producao)
+print("Média de Produção:", media_producao, "unidades")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 42 -->
             <div class="exercicio-card">
-                <h3>42. Verificar Anagrama</h3>
-                <p>Crie um programa que verifique se duas palavras são anagramas (contêm as mesmas letras em ordem diferente).</p>
-                <pre><code>def sao_anagramas(palavra1, palavra2):
-    # Converte as palavras para minúsculas e ordena as letras
-    return sorted(palavra1.lower()) == sorted(palavra2.lower())
-
-# Testando com exemplos
-print(sao_anagramas("amor", "roma"))  # Deve retornar True
-print(sao_anagramas("python", "java"))  # Deve retornar False</code></pre>
+                <h3>42. Calcular Média de Consumo de Água</h3>
+                <p>Crie um programa que calcule a média de consumo de água de uma residência.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>consumo = [10, 12, 8, 11, 9]
+media_consumo = sum(consumo) / len(consumo)
+print("Média de Consumo:", media_consumo, "m³")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 43 -->
             <div class="exercicio-card">
-                <h3>43. Soma de Matrizes</h3>
-                <p>Crie um programa que some duas matrizes 2x2.</p>
-                <pre><code># Definindo as matrizes
-matriz1 = [[1, 2], [3, 4]]
-matriz2 = [[5, 6], [7, 8]]
-
-# Somando as matrizes
-soma = [[matriz1[i][j] + matriz2[i][j] for j in range(len(matriz1[0]))] for i in range(len(matriz1))]
-
-# Exibindo o resultado
-print("Soma das matrizes:", soma)</code></pre>
+                <h3>43. Calcular Média de Consumo de Energia</h3>
+                <p>Crie um programa que calcule a média de consumo de energia elétrica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>consumo = [150, 180, 160, 200, 170]
+media_consumo = sum(consumo) / len(consumo)
+print("Média de Consumo:", media_consumo, "kWh")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 44 -->
             <div class="exercicio-card">
-                <h3>44. Verificar Número Armstrong</h3>
-                <p>Crie um programa que verifique se um número é um número de Armstrong (a soma dos dígitos elevados ao número de dígitos é igual ao próprio número).</p>
-                <pre><code>def eh_armstrong(n):
-    # Obtém os dígitos do número
-    digitos = [int(d) for d in str(n)]
-    # Verifica se é um número de Armstrong
-    return sum(d ** len(digitos) for d in digitos) == n
-
-# Testando com exemplos
-print(eh_armstrong(153))  # Deve retornar True (1³ + 5³ + 3³ = 153)
-print(eh_armstrong(123))  # Deve retornar False</code></pre>
+                <h3>44. Calcular Média de Notas com Exclusão</h3>
+                <p>Crie um programa que calcule a média de notas excluindo a menor nota.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 6.5, 9.0, 8.5]
+notas_sem_menor = sorted(notas)[1:]
+media = sum(notas_sem_menor) / len(notas_sem_menor)
+print("Média sem a menor nota:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 45 -->
             <div class="exercicio-card">
-                <h3>45. Inverter Palavras</h3>
-                <p>Crie um programa que inverta a ordem das palavras em uma frase.</p>
-                <pre><code># Frase de exemplo
-frase = "Python é uma linguagem de programação"
-
-# Dividindo a frase em palavras e invertendo
-palavras = frase.split()
-frase_invertida = " ".join(palavras[::-1])
-
-# Exibindo o resultado
-print("Frase original:", frase)
-print("Frase invertida:", frase_invertida)</code></pre>
+                <h3>45. Calcular Média de Notas com Inclusão</h3>
+                <p>Crie um programa que calcule a média de notas incluindo uma nota extra.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_extra = 9.5
+notas.append(nota_extra)
+media = sum(notas) / len(notas)
+print("Média com nota extra:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 46 -->
             <div class="exercicio-card">
-                <h3>46. Verificar Número Feliz</h3>
-                <p>Crie um programa que verifique se um número é um número feliz (a soma dos quadrados dos dígitos eventualmente chega a 1).</p>
-                <pre><code>def eh_feliz(n):
-    # Conjunto para armazenar números já visitados
-    visitados = set()
-    
-    # Loop até encontrar 1 ou um número já visitado
-    while n != 1 and n not in visitados:
-        visitados.add(n)
-        n = sum(int(d) ** 2 for d in str(n))
-    
-    return n == 1
-
-# Testando com exemplos
-print(eh_feliz(7))  # Deve retornar True
-print(eh_feliz(4))  # Deve retornar False</code></pre>
+                <h3>46. Calcular Média de Notas com Substituição</h3>
+                <p>Crie um programa que calcule a média de notas substituindo a menor nota por uma nota melhor.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 6.5, 9.0, 8.5]
+nota_substituta = 9.5
+notas[notas.index(min(notas))] = nota_substituta
+media = sum(notas) / len(notas)
+print("Média com substituição:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 47 -->
             <div class="exercicio-card">
-                <h3>47. Multiplicação de Matrizes</h3>
-                <p>Crie um programa que multiplique duas matrizes 2x2.</p>
-                <pre><code>def multiplicar_matrizes(a, b):
-    # Função para multiplicar duas matrizes
-    return [[sum(a[i][k] * b[k][j] for k in range(len(b))) 
-             for j in range(len(b[0]))] 
-            for i in range(len(a))]
-
-# Matrizes de exemplo
-matriz1 = [[1, 2], [3, 4]]
-matriz2 = [[5, 6], [7, 8]]
-
-# Realizando a multiplicação
-resultado = multiplicar_matrizes(matriz1, matriz2)
-
-# Exibindo o resultado
-print("Resultado da multiplicação:", resultado)</code></pre>
+                <h3>47. Calcular Média de Notas com Recuperação</h3>
+                <p>Crie um programa que calcule a média final considerando a nota de recuperação.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>nota_regular = 6.0
+nota_recuperacao = 8.0
+media_final = (nota_regular + nota_recuperacao) / 2
+print("Média Final:", media_final)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 48 -->
             <div class="exercicio-card">
-                <h3>48. Verificar Número Kaprekar</h3>
-                <p>Crie um programa que verifique se um número é um número de Kaprekar (quando o quadrado do número pode ser dividido em duas partes que somadas resultam no número original).</p>
-                <pre><code>def eh_kaprekar(n):
-    # Calcula o quadrado do número
-    quadrado = str(n ** 2)
-    
-    # Verifica todas as possíveis divisões
-    for i in range(1, len(quadrado)):
-        parte1 = int(quadrado[:i])
-        parte2 = int(quadrado[i:])
-        if parte1 + parte2 == n:
-            return True
-    return False
-
-# Testando com exemplos
-print(eh_kaprekar(45))  # Deve retornar True (45² = 2025, 20 + 25 = 45)
-print(eh_kaprekar(10))  # Deve retornar False</code></pre>
+                <h3>48. Calcular Média de Notas com Pesos</h3>
+                <p>Crie um programa que calcule a média ponderada de notas com pesos diferentes.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+pesos = [1, 2, 2, 3]
+media_ponderada = sum(n * p for n, p in zip(notas, pesos)) / sum(pesos)
+print("Média Ponderada:", media_ponderada)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 49 -->
             <div class="exercicio-card">
-                <h3>49. Verificar Número Narcisista</h3>
-                <p>Crie um programa que verifique se um número é um número narcisista (a soma dos dígitos elevados ao número de dígitos é igual ao próprio número).</p>
-                <pre><code>def eh_narcisista(n):
-    # Obtém os dígitos do número
-    digitos = [int(d) for d in str(n)]
-    # Verifica se é narcisista
-    return sum(d ** len(digitos) for d in digitos) == n
-
-# Testando com exemplos
-print(eh_narcisista(153))  # Deve retornar True (1³ + 5³ + 3³ = 153)
-print(eh_narcisista(123))  # Deve retornar False</code></pre>
+                <h3>49. Calcular Média de Notas com Exclusão</h3>
+                <p>Crie um programa que calcule a média de notas excluindo a maior e a menor nota.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 6.5, 9.0, 8.5]
+notas_sem_extremos = sorted(notas)[1:-1]
+media = sum(notas_sem_extremos) / len(notas_sem_extremos)
+print("Média sem extremos:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 50 -->
             <div class="exercicio-card">
-                <h3>50. Verificar Número Automórfico</h3>
-                <p>Crie um programa que verifique se um número é um número automórfico (o quadrado do número termina com o próprio número).</p>
-                <pre><code>def eh_automorfico(n):
-    # Calcula o quadrado do número
-    quadrado = str(n ** 2)
-    # Verifica se o quadrado termina com o número original
-    return quadrado.endswith(str(n))
-
-# Testando com exemplos
-print(eh_automorfico(25))  # Deve retornar True (25² = 625)
-print(eh_automorfico(10))  # Deve retornar False</code></pre>
+                <h3>50. Calcular Média de Notas com Arredondamento</h3>
+                <p>Crie um programa que calcule a média de notas e arredonde para duas casas decimais.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = round(sum(notas) / len(notas), 2)
+print("Média arredondada:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 51 -->
             <div class="exercicio-card">
-                <h3>51. Verificar Número Perfeito</h3>
-                <p>Crie um programa que verifique se um número é um número perfeito (a soma dos seus divisores próprios é igual ao próprio número).</p>
-                <pre><code>def eh_perfeito(n):
-    # Encontra os divisores próprios
-    divisores = [i for i in range(1, n) if n % i == 0]
-    # Verifica se a soma dos divisores é igual ao número
-    return sum(divisores) == n
-
-# Testando com exemplos
-print(eh_perfeito(28))  # Deve retornar True (1 + 2 + 4 + 7 + 14 = 28)
-print(eh_perfeito(12))  # Deve retornar False</code></pre>
+                <h3>51. Calcular Média de Notas com Validação</h3>
+                <p>Crie um programa que calcule a média de notas validando se todas as notas estão entre 0 e 10.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+if all(0 <= nota <= 10 for nota in notas):
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Notas inválidas!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 52 -->
             <div class="exercicio-card">
-                <h3>52. Verificar Número Abundante</h3>
-                <p>Crie um programa que verifique se um número é um número abundante (a soma dos seus divisores próprios é maior que o próprio número).</p>
-                <pre><code>def eh_abundante(n):
-    # Encontra os divisores próprios
-    divisores = [i for i in range(1, n) if n % i == 0]
-    # Verifica se a soma dos divisores é maior que o número
-    return sum(divisores) > n
-
-# Testando com exemplos
-print(eh_abundante(12))  # Deve retornar True (1 + 2 + 3 + 4 + 6 = 16 > 12)
-print(eh_abundante(10))  # Deve retornar False</code></pre>
+                <h3>52. Calcular Média de Notas com Filtro</h3>
+                <p>Crie um programa que calcule a média apenas das notas maiores que 7.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 6.5, 9.0, 8.5]
+notas_filtradas = [n for n in notas if n > 7]
+media = sum(notas_filtradas) / len(notas_filtradas)
+print("Média das notas > 7:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 53 -->
             <div class="exercicio-card">
-                <h3>53. Verificar Número Deficiente</h3>
-                <p>Crie um programa que verifique se um número é um número deficiente (a soma dos seus divisores próprios é menor que o próprio número).</p>
-                <pre><code>def eh_deficiente(n):
-    # Encontra os divisores próprios
-    divisores = [i for i in range(1, n) if n % i == 0]
-    # Verifica se a soma dos divisores é menor que o número
-    return sum(divisores) < n
-
-# Testando com exemplos
-print(eh_deficiente(10))  # Deve retornar True (1 + 2 + 5 = 8 < 10)
-print(eh_deficiente(12))  # Deve retornar False</code></pre>
+                <h3>53. Calcular Média de Notas com Pesos Dinâmicos</h3>
+                <p>Crie um programa que calcule a média ponderada com pesos baseados na ordem das notas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+pesos = [i+1 for i in range(len(notas))]
+media_ponderada = sum(n * p for n, p in zip(notas, pesos)) / sum(pesos)
+print("Média Ponderada:", media_ponderada)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 54 -->
             <div class="exercicio-card">
-                <h3>54. Verificar Número Amigável</h3>
-                <p>Crie um programa que verifique se dois números são números amigáveis (a soma dos divisores próprios de um é igual ao outro e vice-versa).</p>
-                <pre><code>def soma_divisores(n):
-    return sum(i for i in range(1, n) if n % i == 0)
-
-def sao_amigaveis(a, b):
-    return soma_divisores(a) == b and soma_divisores(b) == a
-
-# Testando com exemplos
-print(sao_amigaveis(220, 284))  # Deve retornar True
-print(sao_amigaveis(10, 20))    # Deve retornar False</code></pre>
+                <h3>54. Calcular Média de Notas com Exclusão de Zeros</h3>
+                <p>Crie um programa que calcule a média de notas excluindo as notas zero.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 0, 9.0, 8.5, 0]
+notas_sem_zero = [n for n in notas if n != 0]
+media = sum(notas_sem_zero) / len(notas_sem_zero)
+print("Média sem zeros:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 55 -->
             <div class="exercicio-card">
-                <h3>55. Verificar Número Triangular</h3>
-                <p>Crie um programa que verifique se um número é um número triangular (pode ser representado como a soma de números naturais consecutivos).</p>
-                <pre><code>def eh_triangular(n):
-    # Verifica se n é um número triangular
-    i = 1
-    soma = 0
-    while soma < n:
-        soma += i
-        i += 1
-    return soma == n
-
-# Testando com exemplos
-print(eh_triangular(10))  # Deve retornar True (1 + 2 + 3 + 4 = 10)
-print(eh_triangular(11))  # Deve retornar False</code></pre>
+                <h3>55. Calcular Média de Notas com Arredondamento para Cima</h3>
+                <p>Crie um programa que calcule a média de notas e arredonde para cima.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+notas = [7.5, 8.0, 9.0, 8.5]
+media = math.ceil(sum(notas) / len(notas))
+print("Média arredondada para cima:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 56 -->
             <div class="exercicio-card">
-                <h3>56. Verificar Número Pentagonal</h3>
-                <p>Crie um programa que verifique se um número é um número pentagonal (pode ser representado como n(3n-1)/2).</p>
-                <pre><code>def eh_pentagonal(n):
-    # Verifica se n é um número pentagonal
-    i = 1
-    while True:
-        pentagonal = i * (3 * i - 1) // 2
-        if pentagonal == n:
-            return True
-        if pentagonal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_pentagonal(12))  # Deve retornar True
-print(eh_pentagonal(13))  # Deve retornar False</code></pre>
+                <h3>56. Calcular Média de Notas com Arredondamento para Baixo</h3>
+                <p>Crie um programa que calcule a média de notas e arredonde para baixo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+notas = [7.5, 8.0, 9.0, 8.5]
+media = math.floor(sum(notas) / len(notas))
+print("Média arredondada para baixo:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 57 -->
             <div class="exercicio-card">
-                <h3>57. Verificar Número Hexagonal</h3>
-                <p>Crie um programa que verifique se um número é um número hexagonal (pode ser representado como n(2n-1)).</p>
-                <pre><code>def eh_hexagonal(n):
-    # Verifica se n é um número hexagonal
-    i = 1
-    while True:
-        hexagonal = i * (2 * i - 1)
-        if hexagonal == n:
-            return True
-        if hexagonal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_hexagonal(15))  # Deve retornar True
-print(eh_hexagonal(16))  # Deve retornar False</code></pre>
+                <h3>57. Calcular Média de Notas com Truncamento</h3>
+                <p>Crie um programa que calcule a média de notas e trunque para duas casas decimais.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>import math
+notas = [7.5, 8.0, 9.0, 8.5]
+media = math.trunc(sum(notas) / len(notas) * 100) / 100
+print("Média truncada:", media)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 58 -->
             <div class="exercicio-card">
-                <h3>58. Verificar Número Heptagonal</h3>
-                <p>Crie um programa que verifique se um número é um número heptagonal (pode ser representado como n(5n-3)/2).</p>
-                <pre><code>def eh_heptagonal(n):
-    # Verifica se n é um número heptagonal
-    i = 1
-    while True:
-        heptagonal = i * (5 * i - 3) // 2
-        if heptagonal == n:
-            return True
-        if heptagonal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_heptagonal(18))  # Deve retornar True
-print(eh_heptagonal(19))  # Deve retornar False</code></pre>
+                <h3>58. Calcular Média de Notas com Formatação</h3>
+                <p>Crie um programa que calcule a média de notas e formate com duas casas decimais.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+print("Média formatada: {:.2f}".format(media))</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 59 -->
             <div class="exercicio-card">
-                <h3>59. Verificar Número Octagonal</h3>
-                <p>Crie um programa que verifique se um número é um número octagonal (pode ser representado como n(3n-2)).</p>
-                <pre><code>def eh_octagonal(n):
-    # Verifica se n é um número octagonal
-    i = 1
-    while True:
-        octagonal = i * (3 * i - 2)
-        if octagonal == n:
-            return True
-        if octagonal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_octagonal(21))  # Deve retornar True
-print(eh_octagonal(22))  # Deve retornar False</code></pre>
+                <h3>59. Calcular Média de Notas com Validação de Quantidade</h3>
+                <p>Crie um programa que calcule a média de notas validando a quantidade mínima de notas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+min_notas = 3
+if len(notas) >= min_notas:
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Quantidade insuficiente de notas!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 60 -->
             <div class="exercicio-card">
-                <h3>60. Verificar Número Nonagonal</h3>
-                <p>Crie um programa que verifique se um número é um número nonagonal (pode ser representado como n(7n-5)/2).</p>
-                <pre><code>def eh_nonagonal(n):
-    # Verifica se n é um número nonagonal
-    i = 1
-    while True:
-        nonagonal = i * (7 * i - 5) // 2
-        if nonagonal == n:
-            return True
-        if nonagonal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_nonagonal(24))  # Deve retornar True
-print(eh_nonagonal(25))  # Deve retornar False</code></pre>
+                <h3>60. Calcular Média de Notas com Validação de Tipo</h3>
+                <p>Crie um programa que calcule a média de notas validando se todas são números.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+if all(isinstance(n, (int, float)) for n in notas):
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Todas as notas devem ser números!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 61 -->
             <div class="exercicio-card">
-                <h3>61. Verificar Número Decagonal</h3>
-                <p>Crie um programa que verifique se um número é um número decagonal (pode ser representado como n(4n-3)).</p>
-                <pre><code>def eh_decagonal(n):
-    # Verifica se n é um número decagonal
-    i = 1
-    while True:
-        decagonal = i * (4 * i - 3)
-        if decagonal == n:
-            return True
-        if decagonal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_decagonal(27))  # Deve retornar True
-print(eh_decagonal(28))  # Deve retornar False</code></pre>
+                <h3>61. Calcular Média de Notas com Validação de Faixa</h3>
+                <p>Crie um programa que calcule a média de notas validando se estão em uma faixa específica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+faixa_min = 0
+faixa_max = 10
+if all(faixa_min <= nota <= faixa_max for nota in notas):
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Notas fora da faixa permitida!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 62 -->
             <div class="exercicio-card">
-                <h3>62. Verificar Número Estrelado</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado (pode ser representado como 6n(n-1) + 1).</p>
-                <pre><code>def eh_estrelado(n):
-    # Verifica se n é um número estrelado
-    i = 1
-    while True:
-        estrelado = 6 * i * (i - 1) + 1
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado(13))  # Deve retornar True
-print(eh_estrelado(14))  # Deve retornar False</code></pre>
+                <h3>62. Calcular Média de Notas com Validação de Precisão</h3>
+                <p>Crie um programa que calcule a média de notas validando a precisão decimal.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+if all(nota == round(nota, 1) for nota in notas):
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Notas devem ter apenas uma casa decimal!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 63 -->
             <div class="exercicio-card">
-                <h3>63. Verificar Número Centrado Triangular</h3>
-                <p>Crie um programa que verifique se um número é um número centrado triangular (pode ser representado como (3n² - 3n + 2)/2).</p>
-                <pre><code>def eh_centrado_triangular(n):
-    # Verifica se n é um número centrado triangular
-    i = 1
-    while True:
-        centrado = (3 * i * i - 3 * i + 2) // 2
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_triangular(10))  # Deve retornar True
-print(eh_centrado_triangular(11))  # Deve retornar False</code></pre>
+                <h3>63. Calcular Média de Notas com Validação de Quantidade Máxima</h3>
+                <p>Crie um programa que calcule a média de notas validando a quantidade máxima de notas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+max_notas = 5
+if len(notas) <= max_notas:
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Quantidade máxima de notas excedida!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 64 -->
             <div class="exercicio-card">
-                <h3>64. Verificar Número Centrado Quadrado</h3>
-                <p>Crie um programa que verifique se um número é um número centrado quadrado (pode ser representado como n² + (n-1)²).</p>
-                <pre><code>def eh_centrado_quadrado(n):
-    # Verifica se n é um número centrado quadrado
-    i = 1
-    while True:
-        centrado = i * i + (i - 1) * (i - 1)
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_quadrado(13))  # Deve retornar True
-print(eh_centrado_quadrado(14))  # Deve retornar False</code></pre>
+                <h3>64. Calcular Média de Notas com Validação de Unicidade</h3>
+                <p>Crie um programa que calcule a média de notas validando se não há notas repetidas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+if len(notas) == len(set(notas)):
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Existem notas repetidas!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 65 -->
             <div class="exercicio-card">
-                <h3>65. Verificar Número Centrado Pentagonal</h3>
-                <p>Crie um programa que verifique se um número é um número centrado pentagonal (pode ser representado como (5n² - 5n + 2)/2).</p>
-                <pre><code>def eh_centrado_pentagonal(n):
-    # Verifica se n é um número centrado pentagonal
-    i = 1
-    while True:
-        centrado = (5 * i * i - 5 * i + 2) // 2
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_pentagonal(16))  # Deve retornar True
-print(eh_centrado_pentagonal(17))  # Deve retornar False</code></pre>
+                <h3>65. Calcular Média de Notas com Validação de Ordem</h3>
+                <p>Crie um programa que calcule a média de notas validando se estão em ordem crescente.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+if notas == sorted(notas):
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Notas não estão em ordem crescente!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 66 -->
             <div class="exercicio-card">
-                <h3>66. Verificar Número Centrado Hexagonal</h3>
-                <p>Crie um programa que verifique se um número é um número centrado hexagonal (pode ser representado como 3n² - 3n + 1).</p>
-                <pre><code>def eh_centrado_hexagonal(n):
-    # Verifica se n é um número centrado hexagonal
-    i = 1
-    while True:
-        centrado = 3 * i * i - 3 * i + 1
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_hexagonal(19))  # Deve retornar True
-print(eh_centrado_hexagonal(20))  # Deve retornar False</code></pre>
+                <h3>66. Calcular Média de Notas com Validação de Diferença</h3>
+                <p>Crie um programa que calcule a média de notas validando a diferença entre a maior e menor nota.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+diferenca_max = 3
+if max(notas) - min(notas) <= diferenca_max:
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Diferença entre notas muito grande!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 67 -->
             <div class="exercicio-card">
-                <h3>67. Verificar Número Centrado Heptagonal</h3>
-                <p>Crie um programa que verifique se um número é um número centrado heptagonal (pode ser representado como (7n² - 7n + 2)/2).</p>
-                <pre><code>def eh_centrado_heptagonal(n):
-    # Verifica se n é um número centrado heptagonal
-    i = 1
-    while True:
-        centrado = (7 * i * i - 7 * i + 2) // 2
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_heptagonal(22))  # Deve retornar True
-print(eh_centrado_heptagonal(23))  # Deve retornar False</code></pre>
+                <h3>67. Calcular Média de Notas com Validação de Soma</h3>
+                <p>Crie um programa que calcule a média de notas validando a soma total das notas.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+soma_max = 40
+if sum(notas) <= soma_max:
+    media = sum(notas) / len(notas)
+    print("Média:", media)
+else:
+    print("Soma das notas excede o limite!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 68 -->
             <div class="exercicio-card">
-                <h3>68. Verificar Número Centrado Octagonal</h3>
-                <p>Crie um programa que verifique se um número é um número centrado octagonal (pode ser representado como 4n² - 4n + 1).</p>
-                <pre><code>def eh_centrado_octagonal(n):
-    # Verifica se n é um número centrado octagonal
-    i = 1
-    while True:
-        centrado = 4 * i * i - 4 * i + 1
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_octagonal(25))  # Deve retornar True
-print(eh_centrado_octagonal(26))  # Deve retornar False</code></pre>
+                <h3>68. Calcular Média de Notas com Validação de Média Mínima</h3>
+                <p>Crie um programa que calcule a média de notas validando se a média é maior que um valor mínimo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media_min = 7.0
+media = sum(notas) / len(notas)
+if media >= media_min:
+    print("Média:", media)
+else:
+    print("Média abaixo do mínimo!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 69 -->
             <div class="exercicio-card">
-                <h3>69. Verificar Número Centrado Nonagonal</h3>
-                <p>Crie um programa que verifique se um número é um número centrado nonagonal (pode ser representado como (9n² - 9n + 2)/2).</p>
-                <pre><code>def eh_centrado_nonagonal(n):
-    # Verifica se n é um número centrado nonagonal
-    i = 1
-    while True:
-        centrado = (9 * i * i - 9 * i + 2) // 2
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_nonagonal(28))  # Deve retornar True
-print(eh_centrado_nonagonal(29))  # Deve retornar False</code></pre>
+                <h3>69. Calcular Média de Notas com Validação de Média Máxima</h3>
+                <p>Crie um programa que calcule a média de notas validando se a média é menor que um valor máximo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media_max = 9.0
+media = sum(notas) / len(notas)
+if media <= media_max:
+    print("Média:", media)
+else:
+    print("Média acima do máximo!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 70 -->
             <div class="exercicio-card">
-                <h3>70. Verificar Número Centrado Decagonal</h3>
-                <p>Crie um programa que verifique se um número é um número centrado decagonal (pode ser representado como 5n² - 5n + 1).</p>
-                <pre><code>def eh_centrado_decagonal(n):
-    # Verifica se n é um número centrado decagonal
-    i = 1
-    while True:
-        centrado = 5 * i * i - 5 * i + 1
-        if centrado == n:
-            return True
-        if centrado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_centrado_decagonal(31))  # Deve retornar True
-print(eh_centrado_decagonal(32))  # Deve retornar False</code></pre>
+                <h3>70. Calcular Média de Notas com Validação de Faixa de Média</h3>
+                <p>Crie um programa que calcule a média de notas validando se está em uma faixa específica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media_min = 7.0
+media_max = 9.0
+media = sum(notas) / len(notas)
+if media_min <= media <= media_max:
+    print("Média:", media)
+else:
+    print("Média fora da faixa permitida!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 71 -->
             <div class="exercicio-card">
-                <h3>71. Verificar Número Prônico</h3>
-                <p>Crie um programa que verifique se um número é um número prônico (pode ser representado como n(n+1)).</p>
-                <pre><code>def eh_pronico(n):
-    # Verifica se n é um número prônico
-    i = 1
-    while True:
-        pronico = i * (i + 1)
-        if pronico == n:
-            return True
-        if pronico > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_pronico(6))   # Deve retornar True (2 * 3 = 6)
-print(eh_pronico(7))   # Deve retornar False</code></pre>
+                <h3>71. Calcular Média de Notas com Validação de Quantidade de Aprovados</h3>
+                <p>Crie um programa que calcule a média de notas e valide a quantidade de alunos aprovados.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+aprovados = sum(1 for nota in notas if nota >= nota_minima)
+print("Quantidade de aprovados:", aprovados)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 72 -->
             <div class="exercicio-card">
-                <h3>72. Verificar Número Oblongo</h3>
-                <p>Crie um programa que verifique se um número é um número oblongo (pode ser representado como n(n+1)).</p>
-                <pre><code>def eh_oblongo(n):
-    # Verifica se n é um número oblongo
-    i = 1
-    while True:
-        oblongo = i * (i + 1)
-        if oblongo == n:
-            return True
-        if oblongo > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_oblongo(6))   # Deve retornar True (2 * 3 = 6)
-print(eh_oblongo(7))   # Deve retornar False</code></pre>
+                <h3>72. Calcular Média de Notas com Validação de Quantidade de Reprovados</h3>
+                <p>Crie um programa que calcule a média de notas e valide a quantidade de alunos reprovados.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+reprovados = sum(1 for nota in notas if nota < nota_minima)
+print("Quantidade de reprovados:", reprovados)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 73 -->
             <div class="exercicio-card">
-                <h3>73. Verificar Número Tetraédrico</h3>
-                <p>Crie um programa que verifique se um número é um número tetraédrico (pode ser representado como n(n+1)(n+2)/6).</p>
-                <pre><code>def eh_tetraedrico(n):
-    # Verifica se n é um número tetraédrico
-    i = 1
-    while True:
-        tetraedrico = i * (i + 1) * (i + 2) // 6
-        if tetraedrico == n:
-            return True
-        if tetraedrico > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_tetraedrico(20))  # Deve retornar True
-print(eh_tetraedrico(21))  # Deve retornar False</code></pre>
+                <h3>73. Calcular Média de Notas com Validação de Percentual de Aprovados</h3>
+                <p>Crie um programa que calcule a média de notas e valide o percentual de alunos aprovados.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+aprovados = sum(1 for nota in notas if nota >= nota_minima)
+percentual = (aprovados / len(notas)) * 100
+print("Percentual de aprovados: {:.1f}%".format(percentual))</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 74 -->
             <div class="exercicio-card">
-                <h3>74. Verificar Número Piramidal Quadrado</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal quadrado (pode ser representado como n(n+1)(2n+1)/6).</p>
-                <pre><code>def eh_piramidal_quadrado(n):
-    # Verifica se n é um número piramidal quadrado
-    i = 1
-    while True:
-        piramidal = i * (i + 1) * (2 * i + 1) // 6
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_quadrado(14))  # Deve retornar True
-print(eh_piramidal_quadrado(15))  # Deve retornar False</code></pre>
+                <h3>74. Calcular Média de Notas com Validação de Percentual de Reprovados</h3>
+                <p>Crie um programa que calcule a média de notas e valide o percentual de alunos reprovados.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+reprovados = sum(1 for nota in notas if nota < nota_minima)
+percentual = (reprovados / len(notas)) * 100
+print("Percentual de reprovados: {:.1f}%".format(percentual))</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 75 -->
             <div class="exercicio-card">
-                <h3>75. Verificar Número Piramidal Pentagonal</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal pentagonal (pode ser representado como n²(n+1)/2).</p>
-                <pre><code>def eh_piramidal_pentagonal(n):
-    # Verifica se n é um número piramidal pentagonal
-    i = 1
-    while True:
-        piramidal = i * i * (i + 1) // 2
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_pentagonal(20))  # Deve retornar True
-print(eh_piramidal_pentagonal(21))  # Deve retornar False</code></pre>
+                <h3>75. Calcular Média de Notas com Validação de Percentual de Aprovados Mínimo</h3>
+                <p>Crie um programa que calcule a média de notas e valide se o percentual de aprovados é maior que um valor mínimo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+percentual_min = 70
+aprovados = sum(1 for nota in notas if nota >= nota_minima)
+percentual = (aprovados / len(notas)) * 100
+if percentual >= percentual_min:
+    print("Percentual de aprovados: {:.1f}%".format(percentual))
+else:
+    print("Percentual de aprovados abaixo do mínimo!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 76 -->
             <div class="exercicio-card">
-                <h3>76. Verificar Número Piramidal Hexagonal</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal hexagonal (pode ser representado como n(n+1)(4n-1)/6).</p>
-                <pre><code>def eh_piramidal_hexagonal(n):
-    # Verifica se n é um número piramidal hexagonal
-    i = 1
-    while True:
-        piramidal = i * (i + 1) * (4 * i - 1) // 6
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_hexagonal(22))  # Deve retornar True
-print(eh_piramidal_hexagonal(23))  # Deve retornar False</code></pre>
+                <h3>76. Calcular Média de Notas com Validação de Percentual de Reprovados Máximo</h3>
+                <p>Crie um programa que calcule a média de notas e valide se o percentual de reprovados é menor que um valor máximo.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+percentual_max = 30
+reprovados = sum(1 for nota in notas if nota < nota_minima)
+percentual = (reprovados / len(notas)) * 100
+if percentual <= percentual_max:
+    print("Percentual de reprovados: {:.1f}%".format(percentual))
+else:
+    print("Percentual de reprovados acima do máximo!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 77 -->
             <div class="exercicio-card">
-                <h3>77. Verificar Número Piramidal Heptagonal</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal heptagonal (pode ser representado como n(n+1)(5n-2)/6).</p>
-                <pre><code>def eh_piramidal_heptagonal(n):
-    # Verifica se n é um número piramidal heptagonal
-    i = 1
-    while True:
-        piramidal = i * (i + 1) * (5 * i - 2) // 6
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_heptagonal(24))  # Deve retornar True
-print(eh_piramidal_heptagonal(25))  # Deve retornar False</code></pre>
+                <h3>77. Calcular Média de Notas com Validação de Faixa de Percentual de Aprovados</h3>
+                <p>Crie um programa que calcule a média de notas e valide se o percentual de aprovados está em uma faixa específica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+percentual_min = 70
+percentual_max = 90
+aprovados = sum(1 for nota in notas if nota >= nota_minima)
+percentual = (aprovados / len(notas)) * 100
+if percentual_min <= percentual <= percentual_max:
+    print("Percentual de aprovados: {:.1f}%".format(percentual))
+else:
+    print("Percentual de aprovados fora da faixa permitida!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 78 -->
             <div class="exercicio-card">
-                <h3>78. Verificar Número Piramidal Octagonal</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal octagonal (pode ser representado como n(n+1)(6n-3)/6).</p>
-                <pre><code>def eh_piramidal_octagonal(n):
-    # Verifica se n é um número piramidal octagonal
-    i = 1
-    while True:
-        piramidal = i * (i + 1) * (6 * i - 3) // 6
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_octagonal(26))  # Deve retornar True
-print(eh_piramidal_octagonal(27))  # Deve retornar False</code></pre>
+                <h3>78. Calcular Média de Notas com Validação de Faixa de Percentual de Reprovados</h3>
+                <p>Crie um programa que calcule a média de notas e valide se o percentual de reprovados está em uma faixa específica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+nota_minima = 7.0
+percentual_min = 10
+percentual_max = 30
+reprovados = sum(1 for nota in notas if nota < nota_minima)
+percentual = (reprovados / len(notas)) * 100
+if percentual_min <= percentual <= percentual_max:
+    print("Percentual de reprovados: {:.1f}%".format(percentual))
+else:
+    print("Percentual de reprovados fora da faixa permitida!")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 79 -->
             <div class="exercicio-card">
-                <h3>79. Verificar Número Piramidal Nonagonal</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal nonagonal (pode ser representado como n(n+1)(7n-4)/6).</p>
-                <pre><code>def eh_piramidal_nonagonal(n):
-    # Verifica se n é um número piramidal nonagonal
-    i = 1
-    while True:
-        piramidal = i * (i + 1) * (7 * i - 4) // 6
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_nonagonal(28))  # Deve retornar True
-print(eh_piramidal_nonagonal(29))  # Deve retornar False</code></pre>
+                <h3>79. Calcular Média de Notas com Validação de Quantidade de Notas por Faixa</h3>
+                <p>Crie um programa que calcule a média de notas e valide a quantidade de notas em cada faixa de valores.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+faixas = {
+    "0-5": 0,
+    "5-7": 0,
+    "7-9": 0,
+    "9-10": 0
+}
+for nota in notas:
+    if nota < 5:
+        faixas["0-5"] += 1
+    elif nota < 7:
+        faixas["5-7"] += 1
+    elif nota < 9:
+        faixas["7-9"] += 1
+    else:
+        faixas["9-10"] += 1
+print("Quantidade por faixa:", faixas)</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 80 -->
             <div class="exercicio-card">
-                <h3>80. Verificar Número Piramidal Decagonal</h3>
-                <p>Crie um programa que verifique se um número é um número piramidal decagonal (pode ser representado como n(n+1)(8n-5)/6).</p>
-                <pre><code>def eh_piramidal_decagonal(n):
-    # Verifica se n é um número piramidal decagonal
-    i = 1
-    while True:
-        piramidal = i * (i + 1) * (8 * i - 5) // 6
-        if piramidal == n:
-            return True
-        if piramidal > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_piramidal_decagonal(30))  # Deve retornar True
-print(eh_piramidal_decagonal(31))  # Deve retornar False</code></pre>
+                <h3>80. Calcular Média de Notas com Validação de Percentual por Faixa</h3>
+                <p>Crie um programa que calcule a média de notas e valide o percentual de notas em cada faixa de valores.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+faixas = {
+    "0-5": 0,
+    "5-7": 0,
+    "7-9": 0,
+    "9-10": 0
+}
+for nota in notas:
+    if nota < 5:
+        faixas["0-5"] += 1
+    elif nota < 7:
+        faixas["5-7"] += 1
+    elif nota < 9:
+        faixas["7-9"] += 1
+    else:
+        faixas["9-10"] += 1
+for faixa, quantidade in faixas.items():
+    percentual = (quantidade / len(notas)) * 100
+    print(f"{faixa}: {percentual:.1f}%")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 81 -->
             <div class="exercicio-card">
-                <h3>81. Verificar Número Estrelado Centrado</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado centrado (pode ser representado como 6n² - 6n + 1).</p>
-                <pre><code>def eh_estrelado_centrado(n):
-    # Verifica se n é um número estrelado centrado
-    i = 1
-    while True:
-        estrelado = 6 * i * i - 6 * i + 1
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_centrado(13))  # Deve retornar True
-print(eh_estrelado_centrado(14))  # Deve retornar False</code></pre>
+                <h3>81. Calcular Média de Notas com Validação de Faixa de Percentual</h3>
+                <p>Crie um programa que calcule a média de notas e valide se o percentual de notas em cada faixa está dentro de limites específicos.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+faixas = {
+    "0-5": {"min": 0, "max": 10},
+    "5-7": {"min": 10, "max": 30},
+    "7-9": {"min": 40, "max": 60},
+    "9-10": {"min": 10, "max": 30}
+}
+for nota in notas:
+    if nota < 5:
+        faixas["0-5"]["quantidade"] = faixas["0-5"].get("quantidade", 0) + 1
+    elif nota < 7:
+        faixas["5-7"]["quantidade"] = faixas["5-7"].get("quantidade", 0) + 1
+    elif nota < 9:
+        faixas["7-9"]["quantidade"] = faixas["7-9"].get("quantidade", 0) + 1
+    else:
+        faixas["9-10"]["quantidade"] = faixas["9-10"].get("quantidade", 0) + 1
+for faixa, dados in faixas.items():
+    percentual = (dados["quantidade"] / len(notas)) * 100
+    if dados["min"] <= percentual <= dados["max"]:
+        print(f"{faixa}: {percentual:.1f}% (OK)")
+    else:
+        print(f"{faixa}: {percentual:.1f}% (Fora da faixa)")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 82 -->
             <div class="exercicio-card">
-                <h3>82. Verificar Número Estrelado Hexagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado hexagonal (pode ser representado como 6n² - 5n).</p>
-                <pre><code>def eh_estrelado_hexagonal(n):
-    # Verifica se n é um número estrelado hexagonal
-    i = 1
-    while True:
-        estrelado = 6 * i * i - 5 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_hexagonal(16))  # Deve retornar True
-print(eh_estrelado_hexagonal(17))  # Deve retornar False</code></pre>
+                <h3>82. Calcular Média de Notas com Validação de Distribuição</h3>
+                <p>Crie um programa que calcule a média de notas e valide se a distribuição das notas está balanceada.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+faixas = {
+    "0-5": 0,
+    "5-7": 0,
+    "7-9": 0,
+    "9-10": 0
+}
+for nota in notas:
+    if nota < 5:
+        faixas["0-5"] += 1
+    elif nota < 7:
+        faixas["5-7"] += 1
+    elif nota < 9:
+        faixas["7-9"] += 1
+    else:
+        faixas["9-10"] += 1
+max_diff = max(faixas.values()) - min(faixas.values())
+if max_diff <= 2:
+    print("Distribuição balanceada")
+else:
+    print("Distribuição desbalanceada")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 83 -->
             <div class="exercicio-card">
-                <h3>83. Verificar Número Estrelado Heptagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado heptagonal (pode ser representado como 7n² - 6n).</p>
-                <pre><code>def eh_estrelado_heptagonal(n):
-    # Verifica se n é um número estrelado heptagonal
-    i = 1
-    while True:
-        estrelado = 7 * i * i - 6 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_heptagonal(19))  # Deve retornar True
-print(eh_estrelado_heptagonal(20))  # Deve retornar False</code></pre>
+                <h3>83. Calcular Média de Notas com Validação de Tendência</h3>
+                <p>Crie um programa que calcule a média de notas e valide se há uma tendência de crescimento ou decrescimento.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+crescente = all(notas[i] <= notas[i+1] for i in range(len(notas)-1))
+decrescente = all(notas[i] >= notas[i+1] for i in range(len(notas)-1))
+if crescente:
+    print("Tendência crescente")
+elif decrescente:
+    print("Tendência decrescente")
+else:
+    print("Sem tendência definida")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 84 -->
             <div class="exercicio-card">
-                <h3>84. Verificar Número Estrelado Octagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado octagonal (pode ser representado como 8n² - 7n).</p>
-                <pre><code>def eh_estrelado_octagonal(n):
-    # Verifica se n é um número estrelado octagonal
-    i = 1
-    while True:
-        estrelado = 8 * i * i - 7 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_octagonal(22))  # Deve retornar True
-print(eh_estrelado_octagonal(23))  # Deve retornar False</code></pre>
+                <h3>84. Calcular Média de Notas com Validação de Estabilidade</h3>
+                <p>Crie um programa que calcule a média de notas e valide se as notas são estáveis (pouca variação).</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+desvios = [abs(nota - media) for nota in notas]
+max_desvio = max(desvios)
+if max_desvio <= 1.0:
+    print("Notas estáveis")
+else:
+    print("Notas instáveis")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 85 -->
             <div class="exercicio-card">
-                <h3>85. Verificar Número Estrelado Nonagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado nonagonal (pode ser representado como 9n² - 8n).</p>
-                <pre><code>def eh_estrelado_nonagonal(n):
-    # Verifica se n é um número estrelado nonagonal
-    i = 1
-    while True:
-        estrelado = 9 * i * i - 8 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_nonagonal(25))  # Deve retornar True
-print(eh_estrelado_nonagonal(26))  # Deve retornar False</code></pre>
+                <h3>85. Calcular Média de Notas com Validação de Consistência</h3>
+                <p>Crie um programa que calcule a média de notas e valide se as notas são consistentes (desvio padrão baixo).</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+variancia = sum((nota - media) ** 2 for nota in notas) / len(notas)
+desvio_padrao = variancia ** 0.5
+if desvio_padrao <= 1.0:
+    print("Notas consistentes")
+else:
+    print("Notas inconsistentes")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 86 -->
             <div class="exercicio-card">
-                <h3>86. Verificar Número Estrelado Decagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado decagonal (pode ser representado como 10n² - 9n).</p>
-                <pre><code>def eh_estrelado_decagonal(n):
-    # Verifica se n é um número estrelado decagonal
-    i = 1
-    while True:
-        estrelado = 10 * i * i - 9 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_decagonal(28))  # Deve retornar True
-print(eh_estrelado_decagonal(29))  # Deve retornar False</code></pre>
+                <h3>86. Calcular Média de Notas com Validação de Homogeneidade</h3>
+                <p>Crie um programa que calcule a média de notas e valide se as notas são homogêneas (coeficiente de variação baixo).</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+variancia = sum((nota - media) ** 2 for nota in notas) / len(notas)
+desvio_padrao = variancia ** 0.5
+coef_variacao = (desvio_padrao / media) * 100
+if coef_variacao <= 15:
+    print("Notas homogêneas")
+else:
+    print("Notas heterogêneas")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 87 -->
             <div class="exercicio-card">
-                <h3>87. Verificar Número Estrelado Dodecagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado dodecagonal (pode ser representado como 12n² - 11n).</p>
-                <pre><code>def eh_estrelado_dodecagonal(n):
-    # Verifica se n é um número estrelado dodecagonal
-    i = 1
-    while True:
-        estrelado = 12 * i * i - 11 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_dodecagonal(31))  # Deve retornar True
-print(eh_estrelado_dodecagonal(32))  # Deve retornar False</code></pre>
+                <h3>87. Calcular Média de Notas com Validação de Assimetria</h3>
+                <p>Crie um programa que calcule a média de notas e valide se a distribuição é simétrica.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+mediana = sorted(notas)[len(notas)//2]
+if abs(media - mediana) <= 0.5:
+    print("Distribuição simétrica")
+else:
+    print("Distribuição assimétrica")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 88 -->
             <div class="exercicio-card">
-                <h3>88. Verificar Número Estrelado Tetradecagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado tetradecagonal (pode ser representado como 14n² - 13n).</p>
-                <pre><code>def eh_estrelado_tetradecagonal(n):
-    # Verifica se n é um número estrelado tetradecagonal
-    i = 1
-    while True:
-        estrelado = 14 * i * i - 13 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_tetradecagonal(34))  # Deve retornar True
-print(eh_estrelado_tetradecagonal(35))  # Deve retornar False</code></pre>
+                <h3>88. Calcular Média de Notas com Validação de Curtose</h3>
+                <p>Crie um programa que calcule a média de notas e valide se a distribuição é normal (curtose próxima de 3).</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+variancia = sum((nota - media) ** 2 for nota in notas) / len(notas)
+desvio_padrao = variancia ** 0.5
+curtose = sum((nota - media) ** 4 for nota in notas) / (len(notas) * desvio_padrao ** 4)
+if 2.5 <= curtose <= 3.5:
+    print("Distribuição normal")
+else:
+    print("Distribuição não normal")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 89 -->
             <div class="exercicio-card">
-                <h3>89. Verificar Número Estrelado Hexadecagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado hexadecagonal (pode ser representado como 16n² - 15n).</p>
-                <pre><code>def eh_estrelado_hexadecagonal(n):
-    # Verifica se n é um número estrelado hexadecagonal
-    i = 1
-    while True:
-        estrelado = 16 * i * i - 15 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_hexadecagonal(37))  # Deve retornar True
-print(eh_estrelado_hexadecagonal(38))  # Deve retornar False</code></pre>
+                <h3>89. Calcular Média de Notas com Validação de Outliers</h3>
+                <p>Crie um programa que calcule a média de notas e valide se existem valores muito discrepantes.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+variancia = sum((nota - media) ** 2 for nota in notas) / len(notas)
+desvio_padrao = variancia ** 0.5
+outliers = [nota for nota in notas if abs(nota - media) > 2 * desvio_padrao]
+if outliers:
+    print("Existem outliers:", outliers)
+else:
+    print("Não existem outliers")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 90 -->
             <div class="exercicio-card">
-                <h3>90. Verificar Número Estrelado Octadecagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado octadecagonal (pode ser representado como 18n² - 17n).</p>
-                <pre><code>def eh_estrelado_octadecagonal(n):
-    # Verifica se n é um número estrelado octadecagonal
-    i = 1
-    while True:
-        estrelado = 18 * i * i - 17 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_octadecagonal(40))  # Deve retornar True
-print(eh_estrelado_octadecagonal(41))  # Deve retornar False</code></pre>
+                <h3>90. Calcular Média de Notas com Validação de Moda</h3>
+                <p>Crie um programa que calcule a média de notas e valide se existe uma moda significativa.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+frequencias = {}
+for nota in notas:
+    frequencias[nota] = frequencias.get(nota, 0) + 1
+max_freq = max(frequencias.values())
+if max_freq >= len(notas) * 0.5:
+    moda = [nota for nota, freq in frequencias.items() if freq == max_freq]
+    print("Moda significativa:", moda)
+else:
+    print("Sem moda significativa")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 91 -->
             <div class="exercicio-card">
-                <h3>91. Verificar Número Estrelado Icosagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado icosagonal (pode ser representado como 20n² - 19n).</p>
-                <pre><code>def eh_estrelado_icosagonal(n):
-    # Verifica se n é um número estrelado icosagonal
-    i = 1
-    while True:
-        estrelado = 20 * i * i - 19 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_icosagonal(43))  # Deve retornar True
-print(eh_estrelado_icosagonal(44))  # Deve retornar False</code></pre>
+                <h3>91. Calcular Média de Notas com Validação de Quartis</h3>
+                <p>Crie um programa que calcule a média de notas e valide a distribuição dos quartis.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+q1 = notas_ordenadas[len(notas)//4]
+q2 = notas_ordenadas[len(notas)//2]
+q3 = notas_ordenadas[3*len(notas)//4]
+print(f"Q1: {q1}, Q2: {q2}, Q3: {q3}")
+if q3 - q1 <= 2:
+    print("Distribuição concentrada")
+else:
+    print("Distribuição dispersa")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 92 -->
             <div class="exercicio-card">
-                <h3>92. Verificar Número Estrelado Triacontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado triacontagonal (pode ser representado como 30n² - 29n).</p>
-                <pre><code>def eh_estrelado_triacontagonal(n):
-    # Verifica se n é um número estrelado triacontagonal
-    i = 1
-    while True:
-        estrelado = 30 * i * i - 29 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_triacontagonal(46))  # Deve retornar True
-print(eh_estrelado_triacontagonal(47))  # Deve retornar False</code></pre>
+                <h3>92. Calcular Média de Notas com Validação de Amplitude Interquartil</h3>
+                <p>Crie um programa que calcule a média de notas e valide a amplitude interquartil.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+q1 = notas_ordenadas[len(notas)//4]
+q3 = notas_ordenadas[3*len(notas)//4]
+aiq = q3 - q1
+if aiq <= 2:
+    print("Amplitude interquartil pequena")
+else:
+    print("Amplitude interquartil grande")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 93 -->
             <div class="exercicio-card">
-                <h3>93. Verificar Número Estrelado Tetracontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado tetracontagonal (pode ser representado como 40n² - 39n).</p>
-                <pre><code>def eh_estrelado_tetracontagonal(n):
-    # Verifica se n é um número estrelado tetracontagonal
-    i = 1
-    while True:
-        estrelado = 40 * i * i - 39 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_tetracontagonal(49))  # Deve retornar True
-print(eh_estrelado_tetracontagonal(50))  # Deve retornar False</code></pre>
+                <h3>93. Calcular Média de Notas com Validação de Limites</h3>
+                <p>Crie um programa que calcule a média de notas e valide os limites superior e inferior.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+q1 = notas_ordenadas[len(notas)//4]
+q3 = notas_ordenadas[3*len(notas)//4]
+aiq = q3 - q1
+limite_inferior = q1 - 1.5 * aiq
+limite_superior = q3 + 1.5 * aiq
+outliers = [nota for nota in notas if nota < limite_inferior or nota > limite_superior]
+if outliers:
+    print("Existem notas fora dos limites:", outliers)
+else:
+    print("Todas as notas dentro dos limites")</code></pre>
+                </div>
             </div>
 
             <!-- Exercício 94 -->
             <div class="exercicio-card">
-                <h3>94. Verificar Número Estrelado Pentacontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado pentacontagonal (pode ser representado como 50n² - 49n).</p>
-                <pre><code>def eh_estrelado_pentacontagonal(n):
-    # Verifica se n é um número estrelado pentacontagonal
-    i = 1
-    while True:
-        estrelado = 50 * i * i - 49 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_pentacontagonal(52))  # Deve retornar True
-print(eh_estrelado_pentacontagonal(53))  # Deve retornar False</code></pre>
+                <h3>94. Calcular Média de Notas com Validação de Z-Score</h3>
+                <p>Crie um programa que calcule a média de notas e valide os z-scores.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+media = sum(notas) / len(notas)
+variancia = sum((nota - media) ** 2 for nota in notas) / len(notas)
+desvio_padrao = variancia ** 0.5
+z_scores = [(nota - media) / desvio_padrao for nota in notas]
+outliers = [nota for nota, z in zip(notas, z_scores) if abs(z) > 2]
+if outliers:
+    print("Existem notas com z-score alto:", outliers)
+else:
+    print("Todas as notas com z-score normal")</code></pre>
+                </div>
                     </div>
 
             <!-- Exercício 95 -->
             <div class="exercicio-card">
-                <h3>95. Verificar Número Estrelado Hexacontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado hexacontagonal (pode ser representado como 60n² - 59n).</p>
-                <pre><code>def eh_estrelado_hexacontagonal(n):
-    # Verifica se n é um número estrelado hexacontagonal
-    i = 1
-    while True:
-        estrelado = 60 * i * i - 59 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_hexacontagonal(55))  # Deve retornar True
-print(eh_estrelado_hexacontagonal(56))  # Deve retornar False</code></pre>
+                <h3>95. Calcular Média de Notas com Validação de Percentis</h3>
+                <p>Crie um programa que calcule a média de notas e valide os percentis.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+p25 = notas_ordenadas[len(notas)//4]
+p50 = notas_ordenadas[len(notas)//2]
+p75 = notas_ordenadas[3*len(notas)//4]
+print(f"P25: {p25}, P50: {p50}, P75: {p75}")
+if p75 - p25 <= 2:
+    print("Distribuição concentrada")
+else:
+    print("Distribuição dispersa")</code></pre>
+                </div>
                 </div>
 
             <!-- Exercício 96 -->
             <div class="exercicio-card">
-                <h3>96. Verificar Número Estrelado Heptacontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado heptacontagonal (pode ser representado como 70n² - 69n).</p>
-                <pre><code>def eh_estrelado_heptacontagonal(n):
-    # Verifica se n é um número estrelado heptacontagonal
-    i = 1
-    while True:
-        estrelado = 70 * i * i - 69 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_heptacontagonal(58))  # Deve retornar True
-print(eh_estrelado_heptacontagonal(59))  # Deve retornar False</code></pre>
+                <h3>96. Calcular Média de Notas com Validação de Decis</h3>
+                <p>Crie um programa que calcule a média de notas e valide os decis.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+decis = []
+for i in range(1, 10):
+    pos = (i * len(notas)) // 10
+    decis.append(notas_ordenadas[pos])
+print("Decis:", decis)
+if max(decis) - min(decis) <= 3:
+    print("Distribuição uniforme")
+else:
+    print("Distribuição não uniforme")</code></pre>
+                </div>
                     </div>
 
             <!-- Exercício 97 -->
             <div class="exercicio-card">
-                <h3>97. Verificar Número Estrelado Octacontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado octacontagonal (pode ser representado como 80n² - 79n).</p>
-                <pre><code>def eh_estrelado_octacontagonal(n):
-    # Verifica se n é um número estrelado octacontagonal
-    i = 1
-    while True:
-        estrelado = 80 * i * i - 79 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_octacontagonal(61))  # Deve retornar True
-print(eh_estrelado_octacontagonal(62))  # Deve retornar False</code></pre>
+                <h3>97. Calcular Média de Notas com Validação de Centis</h3>
+                <p>Crie um programa que calcule a média de notas e valide os centis.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+centis = []
+for i in range(1, 100):
+    pos = (i * len(notas)) // 100
+    centis.append(notas_ordenadas[pos])
+print("Centis:", centis)
+if max(centis) - min(centis) <= 3:
+    print("Distribuição uniforme")
+else:
+    print("Distribuição não uniforme")</code></pre>
+                </div>
                 </div>
 
             <!-- Exercício 98 -->
             <div class="exercicio-card">
-                <h3>98. Verificar Número Estrelado Enneacontagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado enneacontagonal (pode ser representado como 90n² - 89n).</p>
-                <pre><code>def eh_estrelado_enneacontagonal(n):
-    # Verifica se n é um número estrelado enneacontagonal
-    i = 1
-    while True:
-        estrelado = 90 * i * i - 89 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_enneacontagonal(64))  # Deve retornar True
-print(eh_estrelado_enneacontagonal(65))  # Deve retornar False</code></pre>
+                <h3>98. Calcular Média de Notas com Validação de Permil</h3>
+                <p>Crie um programa que calcule a média de notas e valide os permis.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+notas_ordenadas = sorted(notas)
+permis = []
+for i in range(1, 1000):
+    pos = (i * len(notas)) // 1000
+    permis.append(notas_ordenadas[pos])
+print("Permis:", permis)
+if max(permis) - min(permis) <= 3:
+    print("Distribuição uniforme")
+else:
+    print("Distribuição não uniforme")</code></pre>
+                </div>
                     </div>
 
             <!-- Exercício 99 -->
             <div class="exercicio-card">
-                <h3>99. Verificar Número Estrelado Hectagonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado hectagonal (pode ser representado como 100n² - 99n).</p>
-                <pre><code>def eh_estrelado_hectagonal(n):
-    # Verifica se n é um número estrelado hectagonal
-    i = 1
-    while True:
-        estrelado = 100 * i * i - 99 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_hectagonal(67))  # Deve retornar True
-print(eh_estrelado_hectagonal(68))  # Deve retornar False</code></pre>
+                <h3>99. Calcular Média de Notas com Validação de Razão</h3>
+                <p>Crie um programa que calcule a média de notas e valide a razão entre a maior e menor nota.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+maior = max(notas)
+menor = min(notas)
+razao = maior / menor
+if razao <= 1.5:
+    print("Razão pequena")
+else:
+    print("Razão grande")</code></pre>
+                </div>
                 </div>
 
             <!-- Exercício 100 -->
             <div class="exercicio-card">
-                <h3>100. Verificar Número Estrelado Quilogonal</h3>
-                <p>Crie um programa que verifique se um número é um número estrelado quilogonal (pode ser representado como 1000n² - 999n).</p>
-                <pre><code>def eh_estrelado_quilogonal(n):
-    # Verifica se n é um número estrelado quilogonal
-    i = 1
-    while True:
-        estrelado = 1000 * i * i - 999 * i
-        if estrelado == n:
-            return True
-        if estrelado > n:
-            return False
-        i += 1
-
-# Testando com exemplos
-print(eh_estrelado_quilogonal(70))  # Deve retornar True
-print(eh_estrelado_quilogonal(71))  # Deve retornar False</code></pre>
+                <h3>100. Calcular Média de Notas com Validação de Diferença Percentual</h3>
+                <p>Crie um programa que calcule a média de notas e valide a diferença percentual entre a maior e menor nota.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>notas = [7.5, 8.0, 9.0, 8.5]
+maior = max(notas)
+menor = min(notas)
+diferenca_percentual = ((maior - menor) / menor) * 100
+if diferenca_percentual <= 20:
+    print("Diferença percentual pequena")
+else:
+    print("Diferença percentual grande")</code></pre>
+                </div>
             </div>
         </section>
     </main>

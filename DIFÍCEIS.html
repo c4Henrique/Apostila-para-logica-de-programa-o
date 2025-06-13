@@ -165,7 +165,7 @@
             border-radius: 4px;
             font-size: 0.8rem;
             font-weight: 600;
-            margin-top: 5px;
+            margin-top: 5px;                        
         }
         
         @media (max-width: 768px) {
@@ -497,8 +497,6 @@ print(eh_palindromo("A base do teto desaba"))  # True</code></pre>
                 <h3>11. Algoritmo de Dijkstra (Caminho Mínimo)</h3>
                 <p>Encontra os caminhos mínimos de um vértice para todos os outros em um grafo.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-              
                 <pre><code>def dijkstra(grafo, origem):
     import heapq
     distancias = {no: float('inf') for no in grafo}
@@ -516,16 +514,12 @@ print(eh_palindromo("A base do teto desaba"))  # True</code></pre>
                 heapq.heappush(fila, (nova_dist, vizinho))
     return distancias</code></pre>
             </div>
-             </div>
-        
 
             <!-- Desafio 12 -->
             <div class="exercicio-card">
                 <h3>12. Problema da Mochila (Programação Dinâmica)</h3>
                 <p>Resolve o problema da mochila 0/1 usando programação dinâmica.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-              
                 <pre><code>def mochila(capacidade, pesos, valores):
     n = len(pesos)
     dp = [[0] * (capacidade + 1) for _ in range(n + 1)]
@@ -538,15 +532,12 @@ print(eh_palindromo("A base do teto desaba"))  # True</code></pre>
                 dp[i][w] = dp[i-1][w]
     return dp[n][capacidade]</code></pre>
             </div>
-             </div>
 
             <!-- Desafio 13 -->
             <div class="exercicio-card">
                 <h3>13. Árvore Geradora Mínima (Prim)</h3>
                 <p>Encontra a Árvore Geradora Mínima usando o algoritmo de Prim.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-              
                 <pre><code>def prim(grafo):
     import heapq
     arvore = []
@@ -566,15 +557,12 @@ print(eh_palindromo("A base do teto desaba"))  # True</code></pre>
                     heapq.heappush(arestas, (peso_w, v, w))
     return arvore</code></pre>
             </div>
-             </div>
 
             <!-- Desafio 14 -->
             <div class="exercicio-card">
                 <h3>14. Ordenação Topológica</h3>
                 <p>Ordenação topológica para grafos direcionados acíclicos.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-              
                 <pre><code>def ordenacao_topologica(grafo):
     grau_entrada = {no: 0 for no in grafo}
     for no in grafo:
@@ -594,15 +582,12 @@ print(eh_palindromo("A base do teto desaba"))  # True</code></pre>
     
     return ordenacao if len(ordenacao) == len(grafo) else None</code></pre>
             </div>
-             </div>
 
             <!-- Desafio 15 -->
             <div class="exercicio-card">
                 <h3>15. Busca em Profundidade Iterativa</h3>
                 <p>Busca em profundidade com limite iterativo para encontrar caminhos curtos.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-              
                 <pre><code>def busca_profundidade_iterativa(grafo, origem, destino):
     profundidade = 0
     while True:
@@ -624,15 +609,12 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
                 return True
     return False</code></pre>
             </div>
-             </div>
 
             <!-- Desafio 16 -->
             <div class="exercicio-card">
                 <h3>16. Subsequência Comum Mais Longa (LCS)</h3>
                 <p>Encontra a maior subsequência comum entre duas strings.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-              
                 <pre><code>def lcs(X, Y):
     m, n = len(X), len(Y)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
@@ -659,7 +641,6 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
     
     return ''.join(reversed(sequencia)), dp[m][n]</code></pre>
             </div>
-             </div>
 
             <!-- Desafio 17 -->
             <div class="exercicio-card">
@@ -667,8 +648,7 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
                 <p>Calcula a distância de edição entre duas strings (Levenshtein).</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-              
-                <pre><code>def edit_distance(s1, s2):
+                    <pre><code>def edit_distance(s1, s2):
     m, n = len(s1), len(s2)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
     
@@ -687,8 +667,8 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
                     dp[i-1][j-1]   # Substituição
                 )
     return dp[m][n]</code></pre>
+                </div>
             </div>
-             </div>
 
             <!-- Desafio 18 -->
             <div class="exercicio-card">
@@ -696,8 +676,7 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
                 <p>Resolve um Sudoku usando backtracking.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-              
-                <pre><code>def resolver_sudoku(tabuleiro):
+                    <pre><code>def resolver_sudoku(tabuleiro):
     def valido(linha, col, num):
         # Verificar linha
         for i in range(9):
@@ -736,8 +715,8 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
                 return True
             tabuleiro[linha][col] = 0
     return False</code></pre>
+                </div>
             </div>
-             </div>
 
             <!-- Desafio 19 -->
             <div class="exercicio-card">
@@ -745,8 +724,7 @@ def dfs_limitada(grafo, atual, destino, visitados, limite):
                 <p>Implementação da Transformada Rápida de Fourier.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-              
-                <pre><code>import cmath
+                    <pre><code>import cmath
 
 def fft(x):
     n = len(x)
@@ -758,8 +736,8 @@ def fft(x):
     
     T = [cmath.exp(-2j * cmath.pi * k / n) * impar[k] for k in range(n//2)]
     return [par[k] + T[k] for k in range(n//2)] + [par[k] - T[k] for k in range(n//2)]</code></pre>
+                </div>
             </div>
-             </div>
 
             <!-- Desafio 20 -->
             <div class="exercicio-card">
@@ -767,8 +745,7 @@ def fft(x):
                 <p>Calcula a próxima geração no Jogo da Vida de Conway.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-              
-                <pre><code>def proxima_geracao(tabuleiro):
+                    <pre><code>def proxima_geracao(tabuleiro):
     linhas = len(tabuleiro)
     colunas = len(tabuleiro[0])
     novo = [[0] * colunas for _ in range(linhas)]
@@ -785,7 +762,7 @@ def fft(x):
                     if 0 <= ni < linhas and 0 <= nj < colunas:
                         vizinhos += tabuleiro[ni][nj]
             
-            # Aplicar regras
+            # Aplicar regras do Jogo da Vida
             if tabuleiro[i][j] == 1:
                 if vizinhos < 2 or vizinhos > 3:
                     novo[i][j] = 0
@@ -794,17 +771,268 @@ def fft(x):
             else:
                 if vizinhos == 3:
                     novo[i][j] = 1
+    
     return novo</code></pre>
+                </div>
             </div>
-             </div>
 
             <!-- Desafio 21 -->
             <div class="exercicio-card">
-                <h3>21. Validador de CPF (Reimplementação)</h3>
-                <p>Outra implementação para validar CPF com dígitos verificadores.</p>
+                <h3>21. Compressor de Huffman</h3>
+                <p>Implementação do algoritmo de compressão de Huffman.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-                <pre><code>def validar_cpf(cpf):
+                    <pre><code>from heapq import heappush, heappop, heapify
+from collections import Counter
+
+def huffman_compress(texto):
+    # Contar frequência de cada caractere
+    freq = Counter(texto)
+    
+    # Criar heap de nós
+    heap = [[peso, [char, ""]] for char, peso in freq.items()]
+    heapify(heap)
+    
+    # Construir árvore de Huffman
+    while len(heap) > 1:
+        lo = heappop(heap)
+        hi = heappop(heap)
+        for pair in lo[1:]:
+            pair[1] = '0' + pair[1]
+        for pair in hi[1:]:
+            pair[1] = '1' + pair[1]
+        heappush(heap, [lo[0] + hi[0]] + lo[1:] + hi[1:])
+    
+    # Criar dicionário de códigos
+    codigos = dict(heap[0][1:])
+    
+    # Comprimir texto
+    texto_comprimido = ''.join(codigos[char] for char in texto)
+    
+    return texto_comprimido, codigos</code></pre>
+                </div>
+            </div>
+
+            <!-- Desafio 22 -->
+            <div class="exercicio-card">
+                <h3>22. Algoritmo de Boyer-Moore</h3>
+                <p>Implementação do algoritmo de busca de strings Boyer-Moore.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>def boyer_moore(texto, padrao):
+    def bad_char_rule(padrao):
+        bad_char = {}
+        for i in range(len(padrao)):
+            bad_char[padrao[i]] = i
+        return bad_char
+    
+    def good_suffix_rule(padrao):
+        m = len(padrao)
+        good_suffix = [0] * (m + 1)
+        suffix = [0] * (m + 1)
+        
+        # Caso 1
+        i = m
+        j = m + 1
+        suffix[i] = j
+        
+        while i > 0:
+            while j <= m and padrao[i-1] != padrao[j-1]:
+                if good_suffix[j] == 0:
+                    good_suffix[j] = j - i
+                j = suffix[j]
+            i -= 1
+            j -= 1
+            suffix[i] = j
+        
+        # Caso 2
+        j = suffix[0]
+        for i in range(m + 1):
+            if good_suffix[i] == 0:
+                good_suffix[i] = j
+            if i == j:
+                j = suffix[j]
+        
+        return good_suffix
+    
+    n = len(texto)
+    m = len(padrao)
+    bad_char = bad_char_rule(padrao)
+    good_suffix = good_suffix_rule(padrao)
+    
+    s = 0
+    while s <= n - m:
+        j = m - 1
+        while j >= 0 and padrao[j] == texto[s + j]:
+            j -= 1
+        
+        if j < 0:
+            return s
+        else:
+            s += max(good_suffix[j + 1], j - bad_char.get(texto[s + j], -1))
+    
+    return -1</code></pre>
+                </div>
+            </div>
+
+            <!-- Desafio 23 -->
+            <div class="exercicio-card">
+                <h3>23. Algoritmo de Rabin-Karp</h3>
+                <p>Implementação do algoritmo de busca de strings Rabin-Karp.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>def rabin_karp(texto, padrao):
+    n = len(texto)
+    m = len(padrao)
+    d = 256  # Número de caracteres no alfabeto
+    q = 101  # Número primo para o hash
+    
+    # Calcular hash do padrão e da primeira janela do texto
+    hash_padrao = 0
+    hash_janela = 0
+    h = 1
+    
+    for i in range(m-1):
+        h = (h * d) % q
+    
+    for i in range(m):
+        hash_padrao = (d * hash_padrao + ord(padrao[i])) % q
+        hash_janela = (d * hash_janela + ord(texto[i])) % q
+    
+    # Verificar cada janela do texto
+    for i in range(n - m + 1):
+        if hash_padrao == hash_janela:
+            # Verificar caracteres um por um
+            for j in range(m):
+                if texto[i + j] != padrao[j]:
+                    break
+            else:
+                return i
+        
+        if i < n - m:
+            hash_janela = (d * (hash_janela - ord(texto[i]) * h) + ord(texto[i + m])) % q
+            if hash_janela < 0:
+                hash_janela += q
+    
+    return -1</code></pre>
+                </div>
+            </div>
+
+            <!-- Desafio 24 -->
+            <div class="exercicio-card">
+                <h3>24. Algoritmo de Knuth-Morris-Pratt (KMP)</h3>
+                <p>Implementação do algoritmo de busca de strings KMP.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>def kmp(texto, padrao):
+    def compute_lps(padrao):
+        lps = [0] * len(padrao)
+        length = 0
+        i = 1
+        
+        while i < len(padrao):
+            if padrao[i] == padrao[length]:
+                length += 1
+                lps[i] = length
+                i += 1
+            else:
+                if length != 0:
+                    length = lps[length - 1]
+                else:
+                    lps[i] = 0
+                    i += 1
+        return lps
+    
+    n = len(texto)
+    m = len(padrao)
+    lps = compute_lps(padrao)
+    
+    i = 0  # índice para texto
+    j = 0  # índice para padrão
+    
+    while i < n:
+        if padrao[j] == texto[i]:
+            i += 1
+            j += 1
+        
+        if j == m:
+            return i - j
+        elif i < n and padrao[j] != texto[i]:
+            if j != 0:
+                j = lps[j - 1]
+            else:
+                i += 1
+    
+    return -1</code></pre>
+                </div>
+            </div>
+
+            <!-- Desafio 25 -->
+            <div class="exercicio-card">
+                <h3>25. Algoritmo de Aho-Corasick</h3>
+                <p>Implementação do algoritmo de busca de múltiplos padrões Aho-Corasick.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>from collections import defaultdict
+
+class TrieNode:
+    def __init__(self):
+        self.children = defaultdict(TrieNode)
+        self.fail = None
+        self.output = []
+
+def build_trie(padroes):
+    root = TrieNode()
+    
+    # Construir trie
+    for padrao in padroes:
+        node = root
+        for char in padrao:
+            node = node.children[char]
+        node.output.append(padrao)
+    
+    # Construir links de falha
+    queue = []
+    for char, node in root.children.items():
+        node.fail = root
+        queue.append(node)
+    
+    while queue:
+        current = queue.pop(0)
+        for char, node in current.children.items():
+            queue.append(node)
+            fail = current.fail
+            while fail and char not in fail.children:
+                fail = fail.fail
+            node.fail = fail.children[char] if fail else root
+            node.output.extend(node.fail.output)
+    
+    return root
+
+def aho_corasick(texto, padroes):
+    root = build_trie(padroes)
+    node = root
+    resultados = []
+    
+    for i, char in enumerate(texto):
+        while node is not root and char not in node.children:
+            node = node.fail
+        node = node.children[char] if char in node.children else root
+        
+        for padrao in node.output:
+            resultados.append((i - len(padrao) + 1, padrao))
+    
+    return resultados</code></pre>
+                </div>
+            </div>
+
+            <!-- Desafio 26 -->
+            <div class="exercicio-card">
+                <h3>26. Validador de CPF</h3>
+                <p>Crie um programa que valide se um número de CPF é válido com base nos dígitos verificadores.</p>
+                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
+                <div class="solution-code">
+                    <pre><code>def validar_cpf(cpf):
     cpf = ''.join(filter(str.isdigit, cpf))
     if len(cpf) != 11 or cpf == cpf[0] * 11:
         return False
@@ -815,234 +1043,106 @@ def fft(x):
             digito = 0
         if digito != int(cpf[j]):
             return False
-    return True</code></pre>
-            </div>
-            </div>
-
-            <!-- Desafio 22 -->
-            <div class="exercicio-card">
-                <h3>22. Detector de Ciclo em Grafo</h3>
-                <p>Crie um programa que detecte se há ciclos em um grafo direcionado representado por um dicionário.</p>
-                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-                    <pre><code>def tem_ciclo(grafo):
-    visitado = set()
-    em_recursao = set()
-
-    def visitar(no):
-        if no in em_recursao:
-            return True
-        if no in visitado:
-            return False
-        visitado.add(no)
-        em_recursao.add(no)
-        for vizinho in grafo.get(no, []):
-            if visitar(vizinho):
-                return True
-        em_recursao.remove(no)
-        return False
-
-    return any(visitar(no) for no in grafo)
-
-# Exemplo de uso:
-grafo = {'A': ['B'], 'B': ['C'], 'C': ['A']}
-print(tem_ciclo(grafo))  # True</code></pre>
-                </div>
-            </div>
-
-            <!-- Desafio 23 -->
-            <div class="exercicio-card">
-                <h3>23. Busca Binária Recursiva</h3>
-                <p>Implemente uma busca binária recursiva em uma lista ordenada de inteiros.</p>
-                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-                    <pre><code>def busca_binaria(lista, alvo, inicio, fim):
-    if inicio > fim:
-        return -1
-    meio = (inicio + fim) // 2
-    if lista[meio] == alvo:
-        return meio
-    elif lista[meio] > alvo:
-        return busca_binaria(lista, alvo, inicio, meio - 1)
-    else:
-        return busca_binaria(lista, alvo, meio + 1, fim)
-
-# Exemplo de uso:
-lista = [1, 3, 5, 7, 9, 11, 13, 15]
-print(busca_binaria(lista, 7, 0, len(lista)-1))  # 3</code></pre>
-                </div>
-            </div>
-
-            <!-- Desafio 24 -->
-            <div class="exercicio-card">
-                <h3>24. Conversor Infixa para Pós-fixa</h3>
-                <p>Implemente um conversor de expressões matemáticas da notação infixa para pós-fixa (RPN).</p>
-                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-                    <pre><code>def prioridade(op):
-    return {'+': 1, '-': 1, '*': 2, '/': 2}.get(op, 0)
-
-def infixa_para_posfixa(expr):
-    resultado = []
-    pilha = []
-    for c in expr:
-        if c.isalnum():
-            resultado.append(c)
-        elif c in "+-*/":
-            while pilha and prioridade(c) <= prioridade(pilha[-1]):
-                resultado.append(pilha.pop())
-            pilha.append(c)
-        elif c == '(':
-            pilha.append(c)
-        elif c == ')':
-            while pilha and pilha[-1] != '(':
-                resultado.append(pilha.pop())
-            pilha.pop()
-    while pilha:
-        resultado.append(pilha.pop())
-    return ''.join(resultado)
-
-# Exemplo de uso:
-print(infixa_para_posfixa("a+b*(c-d)"))  # abc-d*+</code></pre>
-                </div>
-            </div>
-
-            <!-- Desafio 25 -->
-            <div class="exercicio-card">
-                <h3>25. Balanceador de Parênteses</h3>
-                <p>Crie um programa que verifique se os parênteses de uma expressão estão balanceados.</p>
-                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-                    <pre><code>def balanceado(expressao):
-    pilha = []
-    for c in expressao:
-        if c == '(':
-            pilha.append(c)
-        elif c == ')':
-            if not pilha:
-                return False
-            pilha.pop()
-    return len(pilha) == 0
-
-# Exemplo de uso:
-print(balanceado("(1+(2*3))"))  # True
-print(balanceado("(1+2*(3)"))   # False</code></pre>
-                </div>
-            </div>
-
-            <!-- Desafio 26 -->
-            <div class="exercicio-card">
-                <h3>26. Validador de Sudoku</h3>
-                <p>Implemente um validador para verificar se uma grade 9x9 de Sudoku está corretamente preenchida.</p>
-                <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
-                <div class="solution-code">
-                    <pre><code>def valido(grupo):
-    return sorted(grupo) == list(range(1, 10))
-
-def validar_sudoku(tabuleiro):
-    for linha in tabuleiro:
-        if not valido(linha):
-            return False
-    for col in zip(*tabuleiro):
-        if not valido(col):
-            return False
-    for i in range(0, 9, 3):
-        for j in range(0, 9, 3):
-            bloco = [tabuleiro[x][y] for x in range(i, i+3) for y in range(j, j+3)]
-            if not valido(bloco):
-                return False
     return True
 
 # Exemplo de uso:
-sudoku = [
-    [5,3,4,6,7,8,9,1,2],
-    [6,7,2,1,9,5,3,4,8],
-    [1,9,8,3,4,2,5,6,7],
-    [8,5,9,7,6,1,4,2,3],
-    [4,2,6,8,5,3,7,9,1],
-    [7,1,3,9,2,4,8,5,6],
-    [9,6,1,5,3,7,2,8,4],
-    [2,8,7,4,1,9,6,3,5],
-    [3,4,5,2,8,6,1,7,9]
-]
-print(validar_sudoku(sudoku))  # True</code></pre>
+print(validar_cpf("12345678909"))</code></pre>
                 </div>
             </div>
 
             <!-- Desafio 27 -->
             <div class="exercicio-card">
-                <h3>27. Sistema de Login com Tentativas</h3>
-                <p>Crie um sistema de login simples com no máximo 3 tentativas para acertar a senha.</p>
+                <h3>27. Validador de CPF</h3>
+                <p>Crie um programa que valide se um número de CPF é válido com base nos dígitos verificadores.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-                    <pre><code>def sistema_login():
-    senha_correta = "1234"
-    tentativas = 3
+                    <pre><code>def validar_cpf(cpf):
+    cpf = ''.join(filter(str.isdigit, cpf))
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
+        return False
+    for j in [9, 10]:
+        soma = sum(int(cpf[i]) * ((j + 1) - i) for i in range(j))
+        digito = (soma * 10) % 11
+        if digito == 10:
+            digito = 0
+        if digito != int(cpf[j]):
+            return False
+    return True
 
-    while tentativas > 0:
-        entrada = input("Digite a senha: ")
-        if entrada == senha_correta:
-            print("Acesso permitido")
-            break
-        else:
-            tentativas -= 1
-            print(f"Tentativas restantes: {tentativas}")
-    else:
-        print("Acesso bloqueado")</code></pre>
+# Exemplo de uso:
+print(validar_cpf("12345678909"))</code></pre>
                 </div>
             </div>
 
             <!-- Desafio 28 -->
             <div class="exercicio-card">
-                <h3>28. Agrupador de Pares e Ímpares</h3>
-                <p>Crie um programa que receba uma lista de inteiros e separe os pares dos ímpares.</p>
+                <h3>28. Validador de CPF</h3>
+                <p>Crie um programa que valide se um número de CPF é válido com base nos dígitos verificadores.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-                    <pre><code>def agrupar_pares_impares(lista):
-    pares = [n for n in lista if n % 2 == 0]
-    impares = [n for n in lista if n % 2 != 0]
-    return pares, impares
+                    <pre><code>def validar_cpf(cpf):
+    cpf = ''.join(filter(str.isdigit, cpf))
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
+        return False
+    for j in [9, 10]:
+        soma = sum(int(cpf[i]) * ((j + 1) - i) for i in range(j))
+        digito = (soma * 10) % 11
+        if digito == 10:
+            digito = 0
+        if digito != int(cpf[j]):
+            return False
+    return True
 
 # Exemplo de uso:
-lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-pares, impares = agrupar_pares_impares(lista)
-print("Pares:", pares)
-print("Ímpares:", impares)</code></pre>
+print(validar_cpf("12345678909"))</code></pre>
                 </div>
             </div>
 
             <!-- Desafio 29 -->
             <div class="exercicio-card">
-                <h3>29. Contador de Palavras</h3>
-                <p>Crie um programa que conte quantas vezes cada palavra aparece em um texto.</p>
+                <h3>29. Validador de CPF</h3>
+                <p>Crie um programa que valide se um número de CPF é válido com base nos dígitos verificadores.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-                    <pre><code>from collections import Counter
-
-def contar_palavras(texto):
-    palavras = texto.split()
-    return Counter(palavras)
+                    <pre><code>def validar_cpf(cpf):
+    cpf = ''.join(filter(str.isdigit, cpf))
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
+        return False
+    for j in [9, 10]:
+        soma = sum(int(cpf[i]) * ((j + 1) - i) for i in range(j))
+        digito = (soma * 10) % 11
+        if digito == 10:
+            digito = 0
+        if digito != int(cpf[j]):
+            return False
+    return True
 
 # Exemplo de uso:
-texto = "o sol brilha e o sol aquece a terra"
-print(contar_palavras(texto))</code></pre>
+print(validar_cpf("12345678909"))</code></pre>
                 </div>
             </div>
 
             <!-- Desafio 30 -->
             <div class="exercicio-card">
-                <h3>30. Validador de Palíndromos</h3>
-                <p>Crie um programa que verifique se uma frase é um palíndromo, desconsiderando espaços e pontuação.</p>
+                <h3>30. Validador de CPF</h3>
+                <p>Crie um programa que valide se um número de CPF é válido com base nos dígitos verificadores.</p>
                 <button class="solution-button" onclick="toggleSolution(this)">Mostrar Solução</button>
                 <div class="solution-code">
-                    <pre><code>import re
-
-def eh_palindromo(frase):
-    frase = re.sub(r'[^a-zA-Z0-9]', '', frase).lower()
-    return frase == frase[::-1]
+                    <pre><code>def validar_cpf(cpf):
+    cpf = ''.join(filter(str.isdigit, cpf))
+    if len(cpf) != 11 or cpf == cpf[0] * 11:
+        return False
+    for j in [9, 10]:
+        soma = sum(int(cpf[i]) * ((j + 1) - i) for i in range(j))
+        digito = (soma * 10) % 11
+        if digito == 10:
+            digito = 0
+        if digito != int(cpf[j]):
+            return False
+    return True
 
 # Exemplo de uso:
-print(eh_palindromo("A base do teto desaba"))  # True</code></pre>
+print(validar_cpf("12345678909"))</code></pre>
                 </div>
             </div>
 
